@@ -4,5 +4,4 @@ extends ../layouts/default
 
 block content
   .container: row
-    p #{JSON.stringify(data)}
-    +movie(data.movie)
+    +movie(data.movie, true)

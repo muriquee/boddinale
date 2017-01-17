@@ -30,7 +30,7 @@ exports = module.exports = function(req, res) {
     console.log('Movie view init')
     const query = keystone.list('Movie').paginate({
 			page: req.query.page || 1,
-			perPage: 8,
+			perPage: 4,
 			maxPages: 10
 		})
     .sort({
