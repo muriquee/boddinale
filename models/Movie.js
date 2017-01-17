@@ -31,6 +31,10 @@ Movie.add({
     youtube  : { type : Types.Url },
     vimeo    : { type : Types.Url }
   },
+  category : {
+    type : Types.Select,
+    options : ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary']
+  },
   award : {
     type : Types.Select,
     options : ['Community Award', 'Loophole Award', 'Best Documentary', 
