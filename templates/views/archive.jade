@@ -1,0 +1,86 @@
+include ../mixins/movie
+
+extends ../layouts/default
+
+block js
+  script.
+    var query = {
+      a : "#{data.query.a}",
+      q : "#{data.query.q}",
+      y : +"#{data.query.y}",
+      d : +"#{data.query.d}"
+    }
+    console.log(query)
+  script.
+    function updateQueryStringParameter(uri, key, value) {
+      var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+      var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+      if (uri.match(re)) {
+        return uri.replace(re, value != "" ? '$1' + key + "=" + value + '$2' : "");
+      }
+      else {
+        return uri + separator + key + "=" + value;
+      }
+    }
+    function submitSearch () {
+      let query = $('#search-input').val()
+      let href = updateQueryStringParameter(window.location.href, 'q', query || '')
+      window.location.href = href
+    }
+    function selectYear (k) {
+      let href = updateQueryStringParameter(window.location.href, 'y', k || '')
+      window.location.href = href
+    }
+    function selectAward (a) {
+      let href = updateQueryStringParameter(window.location.href, 'a', a || '')
+      window.location.href = href
+    }
+    $(function() {
+      $('#search-submit-button').on('click', submitSearch)
+      $('#award-select').val(query.a || '')
+    })
+
+block content
+  .container
+    .row
+      .col-sm-6
+        .input-group
+          input#search-input.form-control(type="text", name="search", placeholder="Search.." value=data.query.q)
+          span.input-group-addon.btn.btn-default#search-submit-button Search
+      .col-sm-6
+        select#award-select.form-control(
+          onchange="selectAward($(this).val())"
+          value="#{data.query.a || ''}")
+          each award in data.awards
+            option= award
+          option(value="") Search for awards
+    ul(style="list-style:none; padding-left:0;")
+      each year, index in data.years
+        li(style="display:inline-block; padding-left:0;")
+          a(onclick="selectYear(#{year})" 
+            style="cursor:pointer; text-decoration:#{data.query.y == year ? 'underline' : 'none'}") #{year}
+          span &nbsp;&nbsp;
+      li(style="cursor:pointer; display:inline-block; padding-left:0;"): a(onclick="selectYear()") Any
+    p #Movies found: #{data.movies.total}
+    
+    if +data.movies.total > 0
+      ul.cards
+        each movie, index in data.movies.results
+          li.cards-item
+            +movie(movie)
+    else
+      p No Movies Found
+    
+    if data.movies.totalPages > 1
+      ul.pagination
+        if data.movies.previous
+          li: a(href= qStrForPage(data.movies.previous)): span.glyphicon.glyphicon-chevron-left
+        else
+          li.disabled: a(href=qStrForPage(1)): span.glyphicon.glyphicon-chevron-left
+        each p, i in data.movies.pages
+          li(class=data.movies.currentPage == p ? 'active' : null)
+            a(href= qStrForPage(p == '...' ? (i ? data.movies.totalPages : 1) : p ))= p
+        if data.movies.next
+          li: a(href= qStrForPage(data.movies.next)): span.glyphicon.glyphicon-chevron-right
+        else
+          li.disabled: a(href= qStrForPage(data.movies.totalPages)): span.entypo.glyphicon.glyphicon-chevron-right
