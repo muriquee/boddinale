@@ -8,8 +8,8 @@ mixin videoEmbed(url)
       img.card-image(src="http://pixelartmaker.com/art/00f9279d85a22b1.png")
       iframe(src=url frameborder="0" allowfullscreen)
 
-mixin movie(movie, trucate)
- .card(style="max-height:#{trucate?'none':'42rem'}")
+mixin movie(movie, truncate)
+ .card(style="max-height:#{truncate?'none':'42rem'}")
     a(href="/movie/#{movie.slug}" style="cursor:pointer;")
       if movie.display.image.url
         img.card-image(src=movie.display.image.url)
@@ -24,3 +24,5 @@ mixin movie(movie, trucate)
       if movie.award != ''
         h5.card-text(style="color:red")= movie.award
       div!= movie.description
+      if movie.externalLink
+        p.card-text <a href="#{movie.externalLink}"><em>trailer</em></a>
