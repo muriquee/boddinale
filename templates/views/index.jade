@@ -3,6 +3,10 @@ extends ../layouts/default
 block intro
 	.container
 		h1 This years page
+		- var days = Array.from(new Array(11), (x,i) => i+1)
+		ul(style="list-style:none; padding-left:0;")
+			each d in days
+				li(style="display:inline-block; padding-left:0;"): a(href="/day/#{d}") Day#{d}
 
 block content
 	.container: .jumbotron
