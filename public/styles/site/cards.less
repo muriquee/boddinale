@@ -1,3 +1,44 @@
+.archive {
+  padding-top: 30px;
+  background-color: @gray-bg;
+
+  .search-wrapper {
+	margin: 0 auto;
+	float: none;
+  }
+
+  .years {
+	float: none;
+	width: auto;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+
+	a {
+	  font-size: 14px;
+	  color: #000;
+	  background-color: #fff;
+	  padding: 10px;
+	}
+  }
+
+  .counter {
+	text-align: center;
+	font-size: 17px;
+	margin: 30px 0 20px;
+  }
+
+  .category {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	float: none;
+	margin: 0 auto;
+	clear: both;
+	display: inherit;
+  }
+
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -8,12 +49,12 @@
 
 .cards-item {
   display: flex;
-  padding: 1rem;
+  padding: 2%;
   @media(min-width: 40rem) {
-    width: 50%;
+	width: 50%;
   }
   @media(min-width: 56rem) {
-    width: 33.3333%;
+	width: 33.3333%;
   }
 }
 
@@ -26,32 +67,56 @@
   overflow: hidden;
   text-overflow: ellipsis;
   &:hover {
-    .card-image {
-      filter: contrast(100%);
-    }
+	.card-image {
+	  filter: contrast(100%);
+	}
   }
 }
 
 .card-title {
   color: @gray-dark;
-  font-size: 1.25rem;
-  font-weight: 300;
-  letter-spacing: 2px;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .card-text, .card-content > p {
   flex: 1 1 auto;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
+  display: flex;
+  width: 100%;
 }
 
 .card-content {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
+  /*display: flex;*/
+  display: block;
+  /*flex: 1 1 auto;
+  flex-direction: column;*/
   padding: 1rem;
+
+  div {
+	display: block;
+	float: left;
+  }
+
+
+  .category-label {
+	text-transform: uppercase;
+	font-size: 1.2rem !important;
+	background-color: #ec6565;
+	padding: 5px;
+	margin-top: 0;
+	font-weight: 600;
+	width: auto;
+	color: #fff;
+	float: left;
+	clear: both;
+	display: inline-block;
+  }
+
 }
 
 .card-image {
@@ -66,14 +131,35 @@
   position: relative;
   transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
   &::before {
-    content: "";
-	  display: block;
-    padding-top: 56.25%; // 16:9 aspect ratio
+	content: "";
+	display: block;
+	padding-top: 56.25%; // 16:9 aspect ratio
   }
   @media(min-width: 40rem) {
-    &::before {
-      padding-top: 66.6%; // 3:2 aspect ratio
-    }
+	&::before {
+	  padding-top: 66.6%; // 3:2 aspect ratio
+	}
   }
   //background-image: url(https://unsplash.it/800/600?image=82);
+}
+
+
+
+.large-card {
+  font-size: 19px;
+  line-height: 1.5;
+
+  .card-title {
+	font-size: 4rem;
+	letter-spacing: 0.5px;
+  }
+
+  .card-image {
+	margin-left: 5%;
+  }
+
+  .card-content {
+	padding: 5%;
+  }
+  
 }

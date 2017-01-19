@@ -29,6 +29,10 @@ html
 
 		//- Include template-specific stylesheets by extending the css block
 		block css
+		link(href='../js/jssocial/jssocials.css', rel='stylesheet')
+		link(href='../js/jssocial/jssocials-theme-plain.css', rel='stylesheet')
+		link(href='../js/jssocial/font-awesome.css', rel='stylesheet')
+		
 
 		//- Add any other template-specific HEAD tags by extending the head block
 		block head
@@ -55,7 +59,9 @@ html
 						ul.nav.navbar-nav.navbar-left
 							each link in navLinks
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-
+						img(src='../images/boddinale_logo.png')
+						.logo-text BERLIN COMMUNITY MOVIE FESTIVAL /// FEBRUARY 9TH-19TH 2017 _ 5TH EDITION
+							
 
 		//- BODY
 		#body
@@ -78,9 +84,34 @@ html
 		//- FOOTER
 		.container: #footer
 
-			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			//- p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
-
+			p.toogle(data-toggle='collapse', data-target='#demo') Imprint
+			#demo.collapse
+				.row
+				p
+					Muriquee UG Grünbergerstrasse 18 10243 Berlin Germany <br />
+					HRB 167113 B <br />
+					Managing Director: Gianluca Baccanico <br />
+					a(href='mailto:g@muriquee.com') g@muriquee.com
+				p Partners
+					.col-sm-6.col-md-4
+						img(src='../images/moviemento-logo.png')
+					.col-sm-6.col-md-4 
+						img(src='../images/11073809_772454926195890_7190610698609973984_n.png')
+					.col-sm-6.col-md-4
+						img(src='../images/logo.jpg')
+				.row
+				p media partners & Sponsors
+					.col-sm-6.col-md-4
+						img(src='../images/fluxfm_schwarz_mit_Kasten.jpg')
+					.col-sm-6.col-md-4
+						img(style='max-height:100px;width: auto;', src='../images/SHOTonRED_Small_transparent.png')
+					.col-sm-6.col-md-4
+						img(src='../images/boddinale_logo.png')
+					
+					
+						
+						
+										
 
 		//- JAVASCRIPT
 
@@ -102,3 +133,6 @@ html
 
 		//- Include template-specific javascript files by extending the js block
 		block js
+		script(src='../js/jssocial/jssocials.min.js')
+		script(src='../js/jssocial/custom.js')
+		

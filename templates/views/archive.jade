@@ -44,29 +44,35 @@ block js
       $('#search-submit-button').on('click', submitSearch)
       $('#award-select').val(query.a || '')
     })
+    
+    
+block intro
+    .container
+        h1 Archive        
 
 block content
-  .container
-    .row
-      .col-sm-6
+  .container.archive
+    .row.col-sm-5.search-wrapper
+      .col-sm-12
         .input-group
           input#search-input.form-control(type="text", name="search", placeholder="Search.." value=data.query.q)
           span.input-group-addon.btn.btn-default#search-submit-button Search
-      .col-sm-6
+      .col-sm-6.category
         select#award-select.form-control(
           onchange="selectAward($(this).val())"
           value="#{data.query.a || ''}")
           each award in data.awards
             option= award
           option(value="") Search for awards
-    ul(style="list-style:none; padding-left:0;")
+    .row.col-sm-9.years
+      ul(style="list-style:none; padding-left:0;")
       each year, index in data.years
         li(style="display:inline-block; padding-left:0;")
           a(onclick="selectYear(#{year})" 
             style="cursor:pointer; text-decoration:#{data.query.y == year ? 'underline' : 'none'}") #{year}
           span &nbsp;&nbsp;
       li(style="cursor:pointer; display:inline-block; padding-left:0;"): a(onclick="selectYear(0)") Any
-    p #Movies found: #{data.movies.total}
+    p.counter #{data.movies.total} Movies found
     
     if +data.movies.total > 0
       ul.cards

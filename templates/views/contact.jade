@@ -5,11 +5,11 @@ block intro
 		h1 Contact Us
 		
 block content
-	.container
+	.container.contact
 		if enquirySubmitted
 			h3 Thanks for getting in touch.
 		else
-			.row: .col-sm-8.col-md-6
+			.row: .col-sm-8.col-md-5.col-centered
 				form(method='post')
 					input(type='hidden', name='action', value='contact')
 					.form-group(class=validationErrors.name ? 'has-error' : null)
