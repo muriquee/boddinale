@@ -10,36 +10,35 @@ block js
       y : +"#{data.query.y}",
       d : +"#{data.query.d}"
     }
-    console.log(query)
   script.
-    function updateQueryStringParameter(uri, key, value) {
-      var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
-      var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-      if (uri.match(re)) {
-        return uri.replace(re, value != "" ? '$1' + key + "=" + value + '$2' : "");
-      }
-      else {
-        return uri + separator + key + "=" + value;
-      }
+    function queryString() {
+      let res = []
+      if (query.y &&  query.y != 0) res.push(`y=${query.y}`)
+      if (query.d) res.push(`d=${query.d}`)
+      if (query.q) res.push(`q=${query.q}`)
+      if (query.page) res.push(`page=${query.page}`)
+      return res.length == 0 ? '' : '?' + res.join('&')
+    }
+    function removeQuery(href) {
+      return href.split("?")[0]
     }
     function submitSearch () {
-      let query = $('#search-input').val()
-      let href = window.location.href
-      href = updateQueryStringParameter(href, 'page', '')
-      href = updateQueryStringParameter(href, 'q', query || '')
-      window.location.href = href
+      query.q = $('#search-input').val()
+      delete query.page
+      let href = removeQuery(window.location.href)
+      window.location.href = href + queryString()
     }
     function selectYear (k) {
-      let href = window.location.href
-      href = updateQueryStringParameter(href, 'page', '')
-      href = updateQueryStringParameter(href, 'y', k == 0 ? '' : k)
-      window.location.href = href
+      query.y = k.toString()
+      delete query.page
+      let href = removeQuery(window.location.href)
+      window.location.href = href + queryString()
     }
     function selectAward (a) {
-      let href = window.location.href
-      href = updateQueryStringParameter(href, 'page', '')
-      href = updateQueryStringParameter(href, 'a', a || '')
-      window.location.href = href
+      let href = removeQuery(window.location.href)
+      query.a = a
+      delete query.page
+      window.location.href = href + queryString()
     }
     $(function() {
       $('#search-submit-button').on('click', submitSearch)
