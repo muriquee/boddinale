@@ -10,7 +10,7 @@ const Content = new keystone.List('Content', {
 Content.add({
   title : { type : Types.Text, required: true, index: true },
   content : {
-    type : Types.Html, wysiwig : true, height: 150
+    type : Types.Html, wysiwyg : true, height: 150
   }
 })
 
