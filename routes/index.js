@@ -41,6 +41,7 @@ exports = module.exports = function (app) {
 	app.get('/jury', routes.views.jury)
 	app.get('/partners', routes.views.partners)
 	app.get('/press', routes.views.press)
+	app.get('/faq', routes.views.faq)
 	app.get('/academy', routes.views.academy)
 	app.get('/day/:day', routes.views.day)
 	app.all('/contact', routes.views.contact)

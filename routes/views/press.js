@@ -7,5 +7,14 @@ exports = module.exports = function(req, res) {
 
   locals.section = 'press'
 
+  view.on('init', next => {
+    keystone.list('Content').model.findOne()
+      .where({'title':'Press'})
+      .exec(function(err, doc) {
+        if (doc) locals.data = doc.content
+        next(err)
+      })
+  })
+
   view.render('press')
 }

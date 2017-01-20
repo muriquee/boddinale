@@ -34,14 +34,28 @@ block intro
     
     
     .row.button-row
-      button.btn.btn-default.previous-button   Previous Day
-      button.btn.btn-default.next-button       Next Day
+      if data.day > 1
+        button.btn.btn-default.previous-button   Previous Day
+      if data.day < 11
+        button.btn.btn-default.next-button       Next Day
 
 block content
-  .container.single-day
-    if +data.movies.length > 0
-      ul.cards
-        each movie, index in data.movies
-          li.cards-item
-            +movie(movie)
+  if data.day < 11
+    - var beforePause = true
+    .container.single-day
+      if +data.movies.length > 0
+        ul.cards
+          each movie, index in data.movies
+            if movie.screenTime.position - index > 1 && beforePause
+              - beforePause = false
+              li.cards-item
+                .card
+                  .card-content
+                    .card-title Pause
+                    .card-text  20:30 to 21:00
+            li.cards-item
+              +movie(movie)
+  else
+    .container: jumbotron
+      div!= data.content
     

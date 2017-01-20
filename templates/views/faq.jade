@@ -1,0 +1,29 @@
+include ../mixins/static-intro
+extends ../layouts/default
+
+
+mixin faq(faq)
+  li
+    p= faq.content
+
+block intro
+  +static-intro("FAQ")
+
+block content
+  .container: .jumbotron
+    ul
+      each faq in data.faqs.results
+        +faq(faq)
+    if data.faqs.totalPages > 1
+    ul.pagination
+      if data.faqs.previous
+        li: a(href='?page=' + data.faqs.previous): span.glyphicon.glyphicon-chevron-left
+      else
+        li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
+      each p, i in data.faqs.pages
+        li(class=data.faqs.currentPage == p ? 'active' : null)
+          a(href='?page=' + (p == '...' ? (i ? data.faqs.totalPages : 1) : p ))= p
+      if data.faqs.next
+        li: a(href='?page=' + data.faqs.next): span.glyphicon.glyphicon-chevron-right
+      else
+        li.disabled: a(href='?page=' + data.faqs.totalPages): span.entypo.glyphicon.glyphicon-chevron-right

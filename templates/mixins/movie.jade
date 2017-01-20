@@ -28,7 +28,7 @@ mixin movie(movie, truncate)
       div.description-text!= movie.description
       
       if movie.externalLink
-        p.card-text <a href="#{movie.externalLink}"><em>trailer</em></a>
+        p.card-text <a href="#{movie.externalLink}" target="_blank"><em>#{movie.externalLink}</em></a>
       #share
     
 

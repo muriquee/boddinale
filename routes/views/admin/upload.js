@@ -64,7 +64,7 @@ function insertData (year, callback) {
         screenTime : {
           year : year,
           day  : movie['day'],
-          slot : movie['slot']
+          position : movie['slot']
         },
         externalLink : isGMailLink(movie['movie link']) ? '' : movie['movie link']
       })
