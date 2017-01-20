@@ -8,25 +8,20 @@ mixin videoEmbed(url)
       img.card-image(src="http://pixelartmaker.com/art/00f9279d85a22b1.png")
       iframe(src=url frameborder="0" allowfullscreen)
 
-mixin workshop(movie, truncate)
+mixin workshop(workshop, truncate)
  .card(class="#{truncate?'large-card':'small-card'}")
-    a.movie(href="/movie/#{movie.slug}" style="cursor:pointer;")
-      if movie.display.image.url
-        img.card-image(src=movie._.display.image.crop(800,450)).img-responsive
-      else if movie.display.youtube
-        +videoEmbed(movie.display.youtube)
-      else if movie.display.vimeo
-        +videoEmbed(movie.display.vimeo)
+    a.movie(href="#" style="cursor:pointer;")
+      if workshop.display.image.url
+        img.card-image(src=workshop._.display.image.crop(800,450)).img-responsive
+      else if workshop.display.youtube
+        +videoEmbed(workshop.display.youtube)
+      else if workshop.display.vimeo
+        +videoEmbed(workshop.display.vimeo)
     .card-content
-      a(href="/movie/#{movie.slug}" style="cursor:pointer;")
-      if movie.award != length
-        .category-label.card-text= movie.award
-      .card-title= movie.title
-      p.card-text.author by <a href="#{movie.director.href}"><em>#{movie.director.name}</em></a>
-      div.movie-category!= movie.category + (',') + ('&#32;')
-      div.movie-length!= movie.length + ('&#39;')
-      div.description-text!= movie.description
-      
-      if movie.externalLink
-        p.card-text <a href="#{movie.externalLink}" target="_blank"><em>#{movie.externalLink}</em></a>
+      a(href="#" style="cursor:pointer;")
+      .card-title= workshop.title
+      p.card-text.author by <a href="#{workshop.director.href}"><em>#{workshop.director.name}</em></a>
+      div.description-text!= workshop.description
+      if workshop.externalLink
+        p.card-text <a href="#{workshop.externalLink}" target="_blank"><em>#{workshop.externalLink}</em></a>
       #share
