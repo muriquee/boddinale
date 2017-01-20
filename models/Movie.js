@@ -44,7 +44,8 @@ Movie.add({
       'Best Short', 'Best Feature', 'Best Animation', 'Best Music Video', 
       'Special Mention of the Jury', 'Special Mention of the Loophole',
       'Independant Life Award']
-  }
+  },
+  tstImage : { type: Types.CloudinaryImage }
 })
 
 

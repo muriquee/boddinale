@@ -13,7 +13,6 @@ exports = module.exports = function(req, res) {
     keystone.list('Movie').model
       .findOne({'slug' : req.params.slug })
       .exec(function(err, doc) {
-        console.log(JSON.stringify(doc))
         locals.data = { movie : doc }
         next(err)
       })

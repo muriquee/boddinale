@@ -1,6 +1,11 @@
 const keystone = require('keystone')
 
 
+const awards = ['Community Award', 'Loophole Award', 'Best Documentary', 
+      'Best Short', 'Best Feature', 'Best Animation', 'Best Music Video', 
+      'Special Mention of the Jury', 'Special Mention of the Loophole',
+      'Independant Life Award']
+
 exports = module.exports = function(req, res) {
   const view = new keystone.View(req, res)
   const locals = res.locals
@@ -11,10 +16,7 @@ exports = module.exports = function(req, res) {
     movies : [],
     query : req.query,
     years : [2013,2014,2015,2016,2017],
-    awards : ['Community Award', 'Loophole Award', 'Best Documentary', 
-      'Best Short', 'Best Feature', 'Best Animation', 'Best Music Video', 
-      'Special Mention of the Jury', 'Special Mention of the Loophole',
-      'Independant Life Award']
+    awards : awards
   }
 
   locals.qStrForPage = function(i) {

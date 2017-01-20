@@ -11,8 +11,9 @@ mixin videoEmbed(url)
 mixin movie(movie, truncate)
  .card(style="max-height:#{truncate?'none':'42rem'}")
     a(href="/movie/#{movie.slug}" style="cursor:pointer;")
+      
       if movie.display.image.url
-        img.card-image(src=movie.display.image.url)
+        img.card-image(src=movie._.display.image.fit(400,400)).img-responsive
       else if movie.display.youtube
         +videoEmbed(movie.display.youtube)
       else if movie.display.vimeo
