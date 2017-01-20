@@ -1,0 +1,24 @@
+include ../mixins/static-intro
+extends ../layouts/default
+
+
+mixin fuck(fuck)
+  li= fuck
+
+block js
+  script.
+    $(() => {
+      document.title = 'fuck'
+    })
+
+block intro
+  +static-intro("Fuck")
+
+block content
+  .container: .jumbotron
+    h1 FUCK
+    p fuck:
+    - var fucks = Array.from(new Array(11), (x,i) => i+1).map(x => "fuck")
+    ul
+      each fuck in fucks
+        +fuck(fuck)

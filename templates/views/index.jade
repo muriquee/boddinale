@@ -1,16 +1,16 @@
+include ../mixins/static-intro
 extends ../layouts/default
 
 block intro
 	.container.home
-		img(src='http://www.boddinale.com/wp-content/uploads/2015/11/boddinale_wp2.jpg')
-		h1 This years page
+		+static-intro()
+
+
+block content
+	.container: .jumbotron.home
 		- var days = Array.from(new Array(11), (x,i) => i+1)
 		ul.row
 			each d in days
 				li.col-xs-15.col-lg-15.days: a(href="/day/#{d}").days-content February #{d+8}th
 					img(src='../images/day#{d}.jpg')
-
-
-block content
-	.container: .jumbotron
 		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at viverra purus. Integer non hendrerit turpis. Nunc at elit quis elit pretium pellentesque ac nec est. Vestibulum porta augue quis velit dapibus consectetur. Nulla facilisi. Curabitur pretium ante quis lacus malesuada suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras eu tortor vitae ante mollis ultrices rutrum at nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam laoreet bibendum nibh. Nam eget magna vehicula, efficitur lectus nec, pulvinar velit. Phasellus at massa et urna tempor accumsan. Duis quis cursus lacus.
