@@ -46,6 +46,7 @@ exports = module.exports = function (app) {
 	app.get('/workshop/:slug', routes.views.workshop)
 	app.get('/day/:day', routes.views.day)
 	app.all('/contact', routes.views.contact)
+	app.get('/cookies', routes.views.cookies)
 
 	app.all('/admin/upload', middleware.requireUser, routes.views.admin.upload)
 
