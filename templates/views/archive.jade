@@ -48,7 +48,7 @@ block js
     
 block intro
     .container
-        h1 Archive        
+                
 
 block content
   .container.archive
@@ -57,7 +57,7 @@ block content
         .input-group
           input#search-input.form-control(type="text", name="search", placeholder="Search.." value=data.query.q)
           span.input-group-addon.btn.btn-default#search-submit-button Search
-      .col-sm-6.category
+      .col-sm-8.category
         select#award-select.form-control(
           onchange="selectAward($(this).val())"
           value="#{data.query.a || ''}")
@@ -69,7 +69,7 @@ block content
       each year, index in data.years
         li(style="display:inline-block; padding-left:0;")
           a(onclick="selectYear(#{year})" 
-            style="cursor:pointer; text-decoration:#{data.query.y == year ? 'underline' : 'none'}") #{year}
+            style="cursor:pointer; border:#{data.query.y == year ? '1px solid #c1c1c1;' : 'none'}") #{year}
           span &nbsp;&nbsp;
       li(style="cursor:pointer; display:inline-block; padding-left:0;"): a(onclick="selectYear(0)") Any
     p.counter #{data.movies.total} Movies found
@@ -80,7 +80,7 @@ block content
           li.cards-item
             +movie(movie)
     else
-      p No Movies Found
+      
     
     if data.movies.totalPages > 1
       ul.pagination

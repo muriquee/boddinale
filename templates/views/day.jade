@@ -27,7 +27,11 @@ block js
 
 block intro
   .container
-    h1 Day #{data.day.toString()}
+    - var days = Array.from(new Array(12), (x,i) => i+8)
+    - var weekdays = ["Monday","Tuesday","Wednesday","Thursday","Friday"]
+     h1 #{weekdays[(data.day-1)%5]} #{days[data.day]}th
+    
+    
     
     .row.button-row
       button.btn.btn-default.previous-button   Previous Day

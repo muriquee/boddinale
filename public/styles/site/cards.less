@@ -19,6 +19,14 @@
 	  color: #000;
 	  background-color: #fff;
 	  padding: 10px;
+	  border: 1px solid #fff !important;
+	  
+	  &:hover {
+		text-decoration: none;
+		border: 1px solid #c1c1c1 !important;
+		
+	  }
+	  
 	}
   }
 
@@ -76,24 +84,43 @@
 .card-title {
   color: @gray-dark;
   font-size: 3rem;
+  width: 100%;
   line-height: 1.2;
-  margin-bottom: 0.5rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
+.movie-category, .movie-length {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: pre;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.card-content a {
+  text-decoration: underline;
+}
+
 .card-text, .card-content > p {
   flex: 1 1 auto;
-  font-size: 1.4rem;
+  font-size: 2rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
   display: flex;
+  
   width: 100%;
 }
 
 .author {
   white-space: pre;
+  
+  a {
+	text-decoration: none !important;
+  }
 }
 
 .card-content {
@@ -106,6 +133,10 @@
   div {
 	display: block;
 	float: left;
+  }
+  
+  .description-text {
+	width: 100%;
   }
 
 
@@ -172,7 +203,8 @@
 
 	.author {
 	  display: block !important;
-	  margin-bottom: 0;
+	  font-size: 1.5rem;
+	  margin-bottom: 0.5rem;
 	}
 	
   }
@@ -196,6 +228,15 @@
 
   .card-content {
 	padding: 2%;
+  }
+  
+  .author {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+  }
+
+  .movie-category, .movie-length {
+	margin-bottom: 1.5rem;
   }
   
   #share {

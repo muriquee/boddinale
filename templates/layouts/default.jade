@@ -54,13 +54,14 @@ html
 							span.icon-bar
 							span.icon-bar
 							span.icon-bar
-						a.navbar-brand(href='/') Boddinale
+						a.navbar-brand(href='/')
+							img(src='../images/boddinale_logo.png')
+						.logo-text BERLIN COMMUNITY MOVIE FESTIVAL
 					.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-left
 							each link in navLinks
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-						img(src='../images/boddinale_logo.png')
-						.logo-text BERLIN COMMUNITY MOVIE FESTIVAL /// FEBRUARY 9TH-19TH 2017 _ 5TH EDITION
+						
 							
 
 		//- BODY
@@ -83,30 +84,31 @@ html
 
 		//- FOOTER
 		.container: #footer
-
+			p Partners
+				.col-sm-6.col-md-4
+					img(src='../images/moviemento-logo.png')
+				.col-sm-6.col-md-4 
+					img(src='../images/11073809_772454926195890_7190610698609973984_n.png')
+				.col-sm-6.col-md-4
+					img(src='../images/kino.png')
+			.row
+			p media partners & Sponsors
+				.col-sm-6.col-md-4
+					img(src='../images/fluxfm_schwarz_mit_Kasten.png')
+				.col-sm-6.col-md-4
+					img(src='../images/logo.png')
+				.col-sm-12.col-md-12
+					img(style="width: 85%; margin: 0 auto;display: block;", src='../images/aktionsfonds.jpg')
+		.container: #footer
 			p.toogle(data-toggle='collapse', data-target='#demo') Imprint
-			#demo.collapse
-				.row
-				p
-					Muriquee UG Grünbergerstrasse 18 10243 Berlin Germany <br />
-					HRB 167113 B <br />
-					Managing Director: Gianluca Baccanico <br />
-					a(href='mailto:g@muriquee.com') g@muriquee.com
-				p Partners
-					.col-sm-6.col-md-4
-						img(src='../images/moviemento-logo.png')
-					.col-sm-6.col-md-4 
-						img(src='../images/11073809_772454926195890_7190610698609973984_n.png')
-					.col-sm-6.col-md-4
-						img(src='../images/logo.jpg')
-				.row
-				p media partners & Sponsors
-					.col-sm-6.col-md-4
-						img(src='../images/fluxfm_schwarz_mit_Kasten.jpg')
-					.col-sm-6.col-md-4
-						img(style='max-height:100px;width: auto;', src='../images/SHOTonRED_Small_transparent.png')
-					.col-sm-6.col-md-4
-						img(src='../images/boddinale_logo.png')
+				#demo.collapse
+					.row
+						p
+							Muriquee UG Grünbergerstrasse 18 10243 Berlin Germany <br />
+							HRB 167113 B <br />
+							Managing Director: Gianluca Baccanico <br />
+							a(href='mailto:g@muriquee.com') g@muriquee.com
+					
 					
 					
 						
