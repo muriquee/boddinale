@@ -1,54 +1,39 @@
+@media (max-width: 768px) {
 
-.button-row {
-  margin: 0;
-  padding: 1.5rem 0;
-  background-color: @gray-bg;
-
-  .next-button {
-	float: right;
-	margin-right: 2%;
+  .navbar-default img {
+	display: none;
   }
 
-  .previous-button {
-	float: left;
-	margin-left: 2%;
+  .navbar-toggle {
+	border-radius: 0;
   }
-}
 
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #bbb;
+	color: #fff;
+	
+  }
 
-.single-day {
-  background-color: @gray-bg;
+  .navbar-toggle:hover .icon-bar, .navbar-toggle:focus .icon-bar {
+	color: #fff;
+  }
+
   
-  .cards-item {
-	width: 100%;
-	padding: 2% 0;
+
+  .navbar-default .navbar-brand {
+	margin-left: 0px !important;
+	font-size: 3rem;
+	font-weight: 500;
+  }
+
+  #header {
+	margin: -1rem;
+	padding: 0rem;
+	margin-bottom: 1rem;
   }
   
-  .card {
-	flex-direction: inherit;
-	min-height: inherit;
-	width: 96%;
-	margin-left: 2%;
-	padding: 2%;
-
-	.card-content {
-	  padding: 0;
-	  flex: 1;
-	}
-	
-	.category-label {
-	  margin-bottom: 1.5rem;
-	}
-	
-	
-	.movie {
-	  cursor: pointer;
-	  width: 33.3%;
-	  margin-right: 2%;
-	}
-	
+  .navbar-default .logo-text {
+	display: none;
   }
   
 }
-
-

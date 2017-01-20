@@ -28,17 +28,16 @@ block js
 block intro
   .container
     h1 Day #{data.day.toString()}
-    .row
+    
+    .row.button-row
       button.btn.btn-default.previous-button   Previous Day
       button.btn.btn-default.next-button       Next Day
 
 block content
-  .container
+  .container.single-day
     if +data.movies.length > 0
       ul.cards
         each movie, index in data.movies
           li.cards-item
             +movie(movie)
-    .row
-      button.btn.btn-default.previous-button   Previous Day
-      button.btn.btn-default.next-button       Next Day
+    

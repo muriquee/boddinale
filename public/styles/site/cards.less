@@ -76,8 +76,10 @@
 .card-title {
   color: @gray-dark;
   font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
@@ -88,6 +90,10 @@
   margin-bottom: 1.25rem;
   display: flex;
   width: 100%;
+}
+
+.author {
+  white-space: pre;
 }
 
 .card-content {
@@ -107,9 +113,9 @@
 	text-transform: uppercase;
 	font-size: 1.2rem !important;
 	background-color: #ec6565;
-	padding: 5px;
-	margin-top: 0;
+	padding: 0.5rem 1rem;
 	font-weight: 600;
+	margin-top: 0.5rem;
 	width: auto;
 	color: #fff;
 	float: left;
@@ -144,6 +150,36 @@
 }
 
 
+.small-card {
+  min-height: 42rem;
+  
+  .card-content {
+
+	p, span {
+	  margin-bottom: 1.5rem;
+	  margin-top: 0.5rem;
+	  overflow: hidden;
+	  display: -webkit-box;
+	  -webkit-line-clamp: 3;
+	  -webkit-box-orient: vertical;
+	  text-align: left !important;
+	  font-family: 'Open Sans', Arial, sans-serif;
+	}
+	
+	p:not(:first-child), #share {
+	  display: none;
+	}
+
+	.author {
+	  display: block !important;
+	  margin-bottom: 0;
+	}
+	
+  }
+  
+}
+
+
 
 .large-card {
   font-size: 19px;
@@ -155,11 +191,17 @@
   }
 
   .card-image {
-	margin-left: 5%;
+	margin: 2% 0 0 2%;
   }
 
   .card-content {
-	padding: 5%;
+	padding: 2%;
+  }
+  
+  #share {
+	clear: both;
+	display: inline-block;
+	font-size: 1.5rem;
   }
   
 }

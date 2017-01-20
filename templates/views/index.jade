@@ -5,9 +5,10 @@ block intro
 		img(src='http://www.boddinale.com/wp-content/uploads/2015/11/boddinale_wp2.jpg')
 		h1 This years page
 		- var days = Array.from(new Array(11), (x,i) => i+1)
-		ul(style="list-style:none; padding-left:0;")
+		ul.row
 			each d in days
-				li(style="display:inline-block; padding-left:0;"): a(href="/day/#{d}") Day#{d}
+				li.col-xs-15.col-lg-15.days: a(href="/day/#{d}").days-content February #{d+8}th
+					img(src='../images/day#{d}.jpg')
 
 
 block content
