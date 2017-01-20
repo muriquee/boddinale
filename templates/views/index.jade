@@ -2,16 +2,16 @@ extends ../layouts/default
 
 block intro
 	.container.home
-		img.logo(src='../images/boddinale_logo.png')
 		h1  February 9th — 19th 2017 <br /> 5th Edition <br />
-		h3 	Free Entrance
-		h5 Loophole and Filmbar <br /> Boddinstraße 60 & 10
+		img.logo(src='../images/boddinale_stripe.jpg')
+		h5 	Free Entrance — Loophole and Filmbar — Boddinstraße 60 & 10
+
 		
 		- var days = Array.from(new Array(11), (x,i) => i+1)
-		- var weekdays = ["Monday","Tuesday","Wednesday","Thursday","Friday"]
+		- var weekdays = ["Thursday","Friday","Saturday","Sunday","Monday","Tuesday", "Wednesday"]
 		ul.row
 			each d, i in days
-				li.col-xs-15.col-lg-15.days: a(href="/day/#{d}").days-content #{weekdays[i%5]}<br />#{8+d}th
+				li.col-xs-15.col-lg-15.days: a(href="/day/#{d}").days-content #{weekdays[i%7]}<br />#{8+d}th
 					img(src='../images/day#{d}.jpg')
 
 
