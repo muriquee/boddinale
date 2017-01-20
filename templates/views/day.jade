@@ -1,0 +1,44 @@
+include ../mixins/movie
+
+extends ../layouts/default
+
+block js
+  script.
+    $(function() {
+      const hostname = window.location.hostname
+      const protocol = window.location.protocol
+      const port     = window.location.port ? `:${window.location.port}` : ''
+      const day      = +#{data.day}
+      function previous () {
+        if (day <= 1) return
+        window.location.href = `${protocol}//${hostname}${port}/day/${day - 1}`
+      }
+      function next () {
+        if (day >= 11) return 
+        window.location.href = `${protocol}//${hostname}${port}/day/${day + 1}`
+      }
+      $('.previous-button')
+        .on('click', previous)
+        .prop('disabled', day <= 1)
+      $('.next-button')
+        .on('click',next)
+        .prop('disabled', day >= 11)
+    })
+
+block intro
+  .container
+    h1 Day #{data.day.toString()}
+    .row
+      button.btn.btn-default.previous-button   Previous Day
+      button.btn.btn-default.next-button       Next Day
+
+block content
+  .container
+    if +data.movies.length > 0
+      ul.cards
+        each movie, index in data.movies
+          li.cards-item
+            +movie(movie)
+    .row
+      button.btn.btn-default.previous-button   Previous Day
+      button.btn.btn-default.next-button       Next Day
