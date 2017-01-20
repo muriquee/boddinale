@@ -16,6 +16,7 @@ block js
       if (query.y &&  query.y != 0) res.push(`y=${query.y}`)
       if (query.d) res.push(`d=${query.d}`)
       if (query.q) res.push(`q=${query.q}`)
+      if (query.a) res.push(`a=${query.a}`)
       if (query.page) res.push(`page=${query.page}`)
       return res.length == 0 ? '' : '?' + res.join('&')
     }

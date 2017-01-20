@@ -24,6 +24,7 @@ exports = module.exports = function(req, res) {
     if (req.query.y) res.push(`y=${req.query.y}`)
     if (req.query.d) res.push(`d=${req.query.d}`)
     if (req.query.q) res.push(`q=${req.query.q}`)
+    if (req.query.a) res.push(`a=${req.query.a}`)
     res.push(`page=${i}`)
     return '?' + res.join('&')
   }

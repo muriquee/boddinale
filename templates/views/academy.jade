@@ -1,9 +1,14 @@
+include ../mixins/workshop
+
 extends ../layouts/default
 
 block intro
   .container
     
-
 block content
-  .container: .jumbotron
-    p coming soon
+   .container.single-day
+      if +data.workshops.length > 0
+        ul.cards
+          each workshop, index in data.workshops
+            li.cards-item
+              +workshop(movie)

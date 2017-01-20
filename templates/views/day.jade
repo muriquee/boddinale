@@ -30,9 +30,6 @@ block intro
     - var days = Array.from(new Array(12), (x,i) => i+8)
     - var weekdays = ["Monday","Tuesday","Wednesday","Thursday","Friday"]
      h1 #{weekdays[(data.day-1)%5]} #{days[data.day]}th
-    
-    
-    
     .row.button-row
       if data.day > 1
         button.btn.btn-default.previous-button   Previous Day

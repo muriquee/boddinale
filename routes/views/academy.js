@@ -6,5 +6,16 @@ exports = module.exports = function(req, res) {
 
   locals.section = 'academy'
 
+  locals.data = {}
+
+  view.on('init', next => {
+    keystone.list('Workshop').model.find()
+      .where({'screenTime.year' : 2017})
+      .exec((err, docs) => {
+        locals.data.workshops = docs
+        next(err)
+      })
+  })
+
   view.render('academy')
 }
