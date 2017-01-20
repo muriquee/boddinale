@@ -6,5 +6,14 @@ exports = module.exports = function(req, res) {
 
   locals.section = 'partners'
 
+  view.on('init', next => {
+    keystone.list('Content').model.findOne()
+      .where({'title':'Partners'})
+      .exec(function(err, doc) {
+        if (doc) locals.data = doc.content
+        next(err)
+      })
+  })
+
   view.render('partners')
 }

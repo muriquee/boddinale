@@ -1,8 +1,9 @@
+include ../mixins/static-intro
+
 extends ../layouts/default
 
 block intro
-	.container
-		h1 Contact Us
+	+static-intro("Contact Us")
 		
 block content
 	.container.contact

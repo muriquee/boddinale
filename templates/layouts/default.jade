@@ -57,8 +57,18 @@ html
 						a.navbar-brand(href='/') Boddinale
 					.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-left
-							each link in navLinks
+							each link in navLinks.filter(l => !l.inDropdown)
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+							li.dropdown
+								a.dropdown-toggle(data-toggle="dropdown", href="#") About
+									span.caret
+								ul.dropdown-menu
+									each link in navLinks.filter(l => l.inDropdown)
+										li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+							li.nav-divider
+						ul.nav.navbar-nav.navbar-right
+							li: a(href="http://www.loophole-berlin.com" target="_blank") Loophole
+							li: a(href="http://beta.muriquee.com" target="_blank") Muriquee
 						img(src='../images/boddinale_logo.png')
 						.logo-text BERLIN COMMUNITY MOVIE FESTIVAL /// FEBRUARY 9TH-19TH 2017 _ 5TH EDITION
 							

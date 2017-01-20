@@ -6,22 +6,25 @@ block intro
 
 block content
   .container: .jumbotron
-    p.
-      Boddinale is produced at Loophole ArtSpace<br>
-      <em> in collaboration with </em> 
-    ul 
-      li Kino Moviemento
-      li Zukunft Kino
-      li IL Kino
-      li Film Bar
-      li Laidak
-      <br>
-    p.
-      Media Partners:
-    ul
-      li Flux FM
-      li Alex TV
-      li indieberlin.de
-    p.
-      For collaborations, sponsorships and/or partnerships please contact us at g@boddinale.com 
+    if data
+      div= data
+    else
+      p.
+        Boddinale is produced at Loophole ArtSpace<br>
+        <em> in collaboration with </em> 
+      ul 
+        li Kino Moviemento
+        li Zukunft Kino
+        li IL Kino
+        li Film Bar
+        li Laidak
+        <br>
+      p.
+        Media Partners:
+      ul
+        li Flux FM
+        li Alex TV
+        li indieberlin.de
+      p.
+        For collaborations, sponsorships and/or partnerships please contact us at g@boddinale.com 
 
