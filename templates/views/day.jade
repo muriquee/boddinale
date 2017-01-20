@@ -41,12 +41,13 @@ block content
       if +data.movies.length > 0
         ul.cards
           each movie, index in data.movies
-            if movie.slot - index > 1 && beforePause
+            if movie.screenTime.position - index > 1 && beforePause
               - beforePause = false
               li.cards-item
                 .card
-                  .card-title Pause
-                  .card-text  20:30 to 21:00
+                  .card-content
+                    .card-title Pause
+                    .card-text  20:30 to 21:00
             li.cards-item
               +movie(movie)
   else
