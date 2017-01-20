@@ -11,6 +11,9 @@ exports = module.exports = function(req, res) {
   view.on('init', next => {
     keystone.list('Workshop').model.find()
       .where({'screenTime.year' : 2017})
+      .sort({
+        'screenTime.position' : 1
+      })
       .exec((err, docs) => {
         locals.data.workshops = docs
         next(err)
