@@ -1,8 +1,8 @@
 const keystone = require('keystone')
 
 
-const awards = ['Community Award', 'Loophole Award', 'Best Documentary', 
-      'Best Short', 'Best Feature', 'Best Animation', 'Best Music Video', 
+const awards = ['Community Award', 'Loophole Award', 'Best Documentary',
+      'Best Short', 'Best Feature', 'Best Animation', 'Best Music Video',
       'Special Mention of the Jury', 'Special Mention of the Loophole',
       'Independant Life Award']
 
@@ -32,7 +32,7 @@ exports = module.exports = function(req, res) {
     console.log('Movie view init')
     const query = keystone.list('Movie').paginate({
 			page: req.query.page || 1,
-			perPage: 4,
+			perPage: 12,
 			maxPages: 10
 		})
     .sort({
@@ -54,7 +54,7 @@ exports = module.exports = function(req, res) {
     if (req.query.a) {
       query.where({'award' : req.query.a })
     }
-    
+
     query.exec(function(err, docs) {
       locals.data.movies = docs
       next(err)
