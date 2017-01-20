@@ -69,6 +69,7 @@ function insertData (year, callback) {
         externalLink : isGMailLink(movie['movie link']) ? '' : movie['movie link']
       })
       let category = (movie['category'].split(' ')[1] || '').toLowerCase().capitalize()
+      console.log("category", category)
       if (categories.indexOf(category) !=- 1){
         mdb.set({
           category : category
@@ -88,7 +89,7 @@ function insertData (year, callback) {
           }
         })
       }
-      mdb.save(console.log)
+      mdb.save((err,doc) => console.log(err))
     })
     callback(null)
   })

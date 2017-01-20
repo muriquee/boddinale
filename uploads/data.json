@@ -1,6 +1,8 @@
-{ "data" : 
+{
+	"data" : 
 [
   {
+    "day": 7,
     "length": 90,
     "category": "1 Feature",
     "title": "Dark Circus",
@@ -11,6 +13,7 @@
     "trailer": "https://vimeo.com/168338593"
   },
   {
+    "day": 5,
     "length": 45,
     "category": "1 Feature",
     "title": "Germany in War",
@@ -21,6 +24,7 @@
     "trailer": ""
   },
   {
+    "day": 2,
     "length": 110,
     "category": "1 Feature",
     "title": "Mr. Rudolpho’s Jubilee",
@@ -31,6 +35,7 @@
     "trailer": "https://youtu.be/JwUOwYukink?list=PLY-1Sf3A__2FKQ_PB98IyFmsN1B0t6nRM"
   },
   {
+    "day": 4,
     "length": 111,
     "category": "1 Feature",
     "title": "Veras Mantel",
@@ -41,6 +46,7 @@
     "trailer": "https://vimeo.com/156690607"
   },
   {
+    "day": 3,
     "length": 95,
     "category": "1 Feature",
     "title": "Train Station",
@@ -51,6 +57,7 @@
     "trailer": "https://youtu.be/fWZy-Hp5SC0"
   },
   {
+    "day": 9,
     "length": 75,
     "category": "1 Feature",
     "title": "LOTTE",
@@ -61,6 +68,7 @@
     "trailer": "https://www.youtube.com/watch?v=yXYDXA1_JA4"
   },
   {
+    "day": 8,
     "length": 53,
     "category": "1 Feature",
     "title": "BLANK",
@@ -71,6 +79,7 @@
     "trailer": ""
   },
   {
+    "day": 1,
     "length": 42,
     "category": "1 Feature",
     "title": "This side of nowhere",
@@ -81,6 +90,7 @@
     "trailer": ""
   },
   {
+    "day": 4,
     "length": 40,
     "category": "1 Feature",
     "title": "Zwei Soldaten",
@@ -91,16 +101,18 @@
     "trailer": "https://www.youtube.com/watch?v=JnrTgifksMs"
   },
   {
+    "day": 10,
     "length": 78,
     "category": "1 Feature",
     "title": "Ann",
-    "director": "CARLA FORTE",
+    "director": "Carla Fonte",
     "director link": "http://fortecarla.com/index.html",
     "description": "Ann is a feature film narrating the story of Ruben, a visual artist who has decided to abandon his tormented life by taking refuge within his own imagination; creating a world parallel to reality, which distances him from all material and emotional attachment, thus exorcising his ego.",
     "movie link": "https://vimeo.com/156797530/76ddf35f7b",
     "trailer": "https://vimeo.com/170217835"
   },
   {
+    "day": 6,
     "length": 2,
     "category": "2 short",
     "title": "L A Y L Â",
@@ -111,6 +123,7 @@
     "trailer": ""
   },
   {
+    "day": 2,
     "length": 4,
     "category": "2 short",
     "title": "Les enfants, la colline verte et la mer",
@@ -121,6 +134,7 @@
     "trailer": ""
   },
   {
+    "day": 10,
     "length": 33,
     "category": "2 short",
     "title": "TLMEA",
@@ -131,6 +145,7 @@
     "trailer": "https://vimeo.com/157065753"
   },
   {
+    "day": 2,
     "length": 3,
     "category": "2 short",
     "title": "At the beachfront",
@@ -141,6 +156,7 @@
     "trailer": ""
   },
   {
+    "day": 4,
     "length": 5,
     "category": "2 short",
     "title": "Monica",
@@ -151,26 +167,29 @@
     "trailer": "https://vimeo.com/152016709"
   },
   {
+    "day": 1,
     "length": 3,
     "category": "2 short",
     "title": "EILAND",
-    "director": "Kuesti Fraun",
+    "director": "Mobtik",
     "director link": "https://www.facebook.com/mobtik",
     "description": "Live everyday as if it were your last because someday you're going to be right.",
     "movie link": "https://mail.google.com/mail/u/2/#search/EILAND/155e6475f22a5595?projector=1",
     "trailer": ""
   },
   {
+    "day": 8,
     "length": 1,
     "category": "2 short",
     "title": "Smart User",
-    "director": "Kuesti Fraun",
+    "director": "Mobtik",
     "director link": "https://www.facebook.com/mobtik",
     "description": "a prayer to the new gods of permanent availibility",
     "movie link": "https://mail.google.com/mail/u/2/#search/EILAND/155e6475f22a5595?projector=1",
     "trailer": ""
   },
   {
+    "day": 9,
     "length": 4,
     "category": "2 short",
     "title": "how to fake that you are nice and caring",
@@ -181,6 +200,7 @@
     "trailer": ""
   },
   {
+    "day": 5,
     "length": 4,
     "category": "2 short",
     "title": "A Little Help",
@@ -191,6 +211,7 @@
     "trailer": ""
   },
   {
+    "day": 2,
     "length": 12,
     "category": "2 short",
     "title": "Ianus",
@@ -201,9 +222,10 @@
     "trailer": ""
   },
   {
+    "day": 3,
     "length": 13,
     "category": "2 short",
-    "title": "The Runner",
+    "title": "Les Capoter aux fruits",
     "director": "Mélodie Grumberg",
     "director link": "",
     "description": "Hannah is a young woman who lives in Israel. Solitude weighs on her, nothing works as she would like, when she meets a man who awakens her need to explode.",
@@ -211,16 +233,18 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/The+Runner/1597fba1a4961fec?projector=1"
   },
   {
+    "day": 7,
     "length": 8,
     "category": "2 short",
     "title": "META HOMO STRI",
-    "director": "Ralph",
+    "director": "Panipirate",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": "https://www.youtube.com/watch?v=QH8UpN5ZYbo&feature=youtu.be"
   },
   {
+    "day": 6,
     "length": 5,
     "category": "2 short",
     "title": "That was Awkward",
@@ -231,6 +255,7 @@
     "trailer": ""
   },
   {
+    "day": 6,
     "length": 8,
     "category": "2 short",
     "title": "cosmorama",
@@ -241,6 +266,7 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/They+go+to+a+day+trip+to+an+island+next+to+Istanbul.+They+find+themselves+captivated+by+the+never+ending+cityscape+and+sink+into+a+contemplation+on+urban+decay.+Living+in+a+concrete+jungle+is+their+future./1597fbc6b7e40527?projector=1"
   },
   {
+    "day": 5,
     "length": 20,
     "category": "2 short",
     "title": "Alex",
@@ -251,6 +277,7 @@
     "trailer": ""
   },
   {
+    "day": 1,
     "length": 12,
     "category": "2 short",
     "title": "Va Banque – Risky Game",
@@ -261,6 +288,7 @@
     "trailer": ""
   },
   {
+    "day": 1,
     "length": 10,
     "category": "2 short",
     "title": "Nachspiel",
@@ -271,6 +299,7 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/Nachspiel/1597fc09ecd96f65?projector=1"
   },
   {
+    "day": 10,
     "length": 29,
     "category": "2 short",
     "title": "SELBSTFINDUNGSTRIP ORANGENSAFT",
@@ -281,6 +310,7 @@
     "trailer": "https://vimeo.com/195644488"
   },
   {
+    "day": 5,
     "length": 30,
     "category": "2 short",
     "title": "Bleib bei mir",
@@ -291,16 +321,18 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/Bleib+bei+mir/15956a707d09fbc0?projector=1"
   },
   {
+    "day": 6,
     "length": 4,
     "category": "2 short",
     "title": "Moments of NO",
-    "director": "",
+    "director": "Annalisa Aliena",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 5,
     "length": 4,
     "category": "2 short",
     "title": "Lemonade",
@@ -311,6 +343,7 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/Lemonade/1597fc4941a2e056?projector=1"
   },
   {
+    "day": 5,
     "length": 11,
     "category": "2 short",
     "title": "Glance",
@@ -321,6 +354,7 @@
     "trailer": "https://vimeo.com/70011405"
   },
   {
+    "day": 3,
     "length": 22,
     "category": "2 short",
     "title": "Ihr Sohn",
@@ -331,6 +365,7 @@
     "trailer": "http://www.katharinawoll.com/?/projects/IhrSohn/"
   },
   {
+    "day": 3,
     "length": 14,
     "category": "2 short",
     "title": "THE DEVIL KNOWS MY NAME",
@@ -341,6 +376,7 @@
     "trailer": ""
   },
   {
+    "day": 7,
     "length": 4,
     "category": "2 short",
     "title": "Bürotrick",
@@ -351,6 +387,7 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/B%C3%BCrotrick/1598d07af667e431?projector=1"
   },
   {
+    "day": 6,
     "length": 5,
     "category": "2 short",
     "title": "SIE MACHT ES VOR",
@@ -361,16 +398,18 @@
     "trailer": "https://www.rainbowwarrior.at/w/smev/"
   },
   {
+    "day": 7,
     "length": 7,
     "category": "2 short",
     "title": "Why not be beautiful?",
-    "director": "",
+    "director": "Sabrina Tenório",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 9,
     "length": 17,
     "category": "2 short",
     "title": "Dominus DIxit",
@@ -381,6 +420,7 @@
     "trailer": "http://evy-schubert.de/dominus-dixit"
   },
   {
+    "day": 2,
     "length": 27,
     "category": "2 short",
     "title": "The Wind",
@@ -391,6 +431,7 @@
     "trailer": "https://vimeo.com/146913081"
   },
   {
+    "day": 6,
     "length": 3,
     "category": "2 short",
     "title": "RED",
@@ -401,16 +442,18 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/Sandra+Bourdonnec/159307034650518d?projector=1"
   },
   {
+    "day": 10,
     "length": 3,
     "category": "2 short",
     "title": "ALL YOU NEED",
-    "director": "",
+    "director": "Marc Emblem",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 8,
     "length": 6,
     "category": "2 short",
     "title": "Metaxy",
@@ -421,6 +464,7 @@
     "trailer": ""
   },
   {
+    "day": 10,
     "length": 11,
     "category": "2 short",
     "title": "Breathe",
@@ -431,18 +475,20 @@
     "trailer": "https://www.dropbox.com/s/q9llcpjeone4a1v/Breathe-trailer-H264.mp4?dl=0"
   },
   {
+    "day": 6,
     "length": 38,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Bleeding Clowns",
-    "director": "",
+    "director": "Shyam L.Jones",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 1,
     "length": 16,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Biedaszyby",
     "director": "Paul Henschel",
     "director link": "",
@@ -451,8 +497,9 @@
     "trailer": ""
   },
   {
+    "day": 6,
     "length": 7,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Simon Newby",
     "director": "Marissa Medal",
     "director link": "",
@@ -461,8 +508,9 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/Simon+Newby/159a8958708d42c7?projector=1"
   },
   {
+    "day": 6,
     "length": 77,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Ninas Farbfilm",
     "director": "Lenka Ritschny",
     "director link": "",
@@ -471,8 +519,9 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/Ninas+Farbfilm/1597fe1bc6d5c0c5?projector=1"
   },
   {
+    "day": 1,
     "length": 68,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "MY BUDDHA IS PUNK",
     "director": "Andreas Hartmann",
     "director link": "http://www.andreas-hartmann.com/",
@@ -481,8 +530,9 @@
     "trailer": "https://vimeo.com/122998054"
   },
   {
+    "day": 1,
     "length": 27,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Shelter",
     "director": "Shiva Puri",
     "director link": "",
@@ -491,8 +541,9 @@
     "trailer": ""
   },
   {
+    "day": 8,
     "length": 10,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Pink Voice",
     "director": "Felix Henke",
     "director link": "",
@@ -501,8 +552,9 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/Pink+Voice/159a426c29d4bffc?projector=1"
   },
   {
+    "day": 8,
     "length": 25,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Rupa",
     "director": "Lisa Mala Reinhardt",
     "director link": "",
@@ -511,18 +563,20 @@
     "trailer": "https://mail.google.com/mail/u/2/#search/Rupa/1597fe66e7406ee2?projector=1"
   },
   {
+    "day": 5,
     "length": 20,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Blue Identity",
-    "director": "layla film",
+    "director": "Mimic Bariş",
     "director link": "http://laylafilm.com/layla/film/",
     "description": "",
     "movie link": "https://mail.google.com/mail/u/2/#search/blue+identity/1597fe72f42f5794?projector=1",
     "trailer": "https://vimeo.com/57062449"
   },
   {
+    "day": 7,
     "length": 64,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Yalla Khartoum",
     "director": "Andreas Lamoth & Frederic Leitzke",
     "director link": "",
@@ -531,8 +585,9 @@
     "trailer": "https://vimeo.com/180168530"
   },
   {
+    "day": 6,
     "length": 29,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Tagelöhner Syndrom // Work For One Day",
     "director": "Rita Bakacs",
     "director link": "http://cargocollective.com/ritabakacs",
@@ -541,28 +596,31 @@
     "trailer": "https://vimeo.com/137847794"
   },
   {
+    "day": 9,
     "length": 10,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Immer wieder Sonntags",
-    "director": "",
+    "director": "Marc Sebastian Eils and Nils Plambeck",
     "director link": "",
     "description": "According to the law it is illegal to open a shop like a Spätkauf on Sundays. In Berlin-Neukölln police officers and public order authorities prosecute these offenses very strictly. But now the Spätkauf-owners decided to found an association and to fight for the permission to open their shops on Sundays. \"Always on Sunday\" is a short documentary about self-organization, kiez-culture in Berlin and local politics.",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 8,
     "length": 85,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Nothing to Hide",
-    "director": "Marc & Miha",
+    "director": "Marc Meillassoux and Mihaela Gladovic",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": "https://vimeo.com/185535526"
   },
   {
+    "day": 10,
     "length": 11,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Barcelona_Salvaje",
     "director": "Sergi Sánchez Rodriguez",
     "director link": "",
@@ -571,18 +629,20 @@
     "trailer": ""
   },
   {
+    "day": 5,
     "length": 36,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Parko",
-    "director": "Clara Parkofilm",
+    "director": "J.Eichotn, S.Kalafati, C.S.Hüneke and L.Link",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 9,
     "length": 13,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Radeau de la cambuse",
     "director": "Catherine Ricoul",
     "director link": "",
@@ -591,8 +651,9 @@
     "trailer": ""
   },
   {
+    "day": 9,
     "length": 50,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "valentina",
     "director": "Maximilian  Feldmann",
     "director link": "",
@@ -601,8 +662,9 @@
     "trailer": "http://www.valentina-film.com/en/home/"
   },
   {
+    "day": 3,
     "length": 19,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Dragon Circle",
     "director": "Gertrud  Schulte  Westenberg",
     "director link": "",
@@ -611,8 +673,9 @@
     "trailer": "http://www.filmfabrik.org/short_de.html"
   },
   {
+    "day": 4,
     "length": 67,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "When I dance",
     "director": "Daniela Lucato",
     "director link": "www.daniela-lucato.de",
@@ -621,8 +684,9 @@
     "trailer": "https://vimeo.com/142400833"
   },
   {
+    "day": 2,
     "length": 17,
-    "category": "3 docu",
+    "category": "3 documentary",
     "title": "Frohe Zukunft",
     "director": "Andrea Rüthel and Katharina Wittmann",
     "director link": "",
@@ -631,136 +695,150 @@
     "trailer": ""
   },
   {
+    "day": 3,
     "length": 2,
     "category": "4 music",
     "title": "Ralf Hildenbeutel - Disco",
-    "director": "",
+    "director": "Boris Seewald",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 9,
     "length": 6,
     "category": "4 music",
     "title": "Maximilian Conway -Real MC",
-    "director": "",
+    "director": "Maximilian Conway",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 10,
     "length": 4,
     "category": "4 music",
     "title": "Hainbach - Miasmatic",
-    "director": "",
+    "director": "Nani Gutierrez",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 8,
     "length": 4,
     "category": "4 music",
     "title": "Enkephalin - Glory to the Guilty",
-    "director": "",
+    "director": "Diego Tibocha",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 7,
     "length": 5,
     "category": "4 music",
     "title": "Duo - Bow to the Rhythm",
-    "director": "",
+    "director": "Patricia Sack",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 2,
     "length": 4,
     "category": "4 music",
     "title": "Eating Snow - This Emptiness Is Mine",
-    "director": "",
+    "director": "Editude Pictures",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 5,
     "length": 4,
     "category": "4 music",
     "title": "Gelbart - The Big Sleep",
-    "director": "",
+    "director": "Adi Gelbart",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 4,
     "length": 4,
     "category": "4 music",
     "title": "Peter Piek - 1st Song",
-    "director": "",
+    "director": "Marcus Grysczok",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 1,
     "length": 4,
     "category": "music",
     "title": "Mary Ocher - Arms",
-    "director": "",
+    "director": "Mary Ocher",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 4,
     "length": 4,
     "category": "5 animation",
     "title": "transit",
-    "director": "",
+    "director": "Aline Helmcke",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 3,
     "length": 11,
     "category": "5 animation",
     "title": "Eine Villa mit Pinien",
-    "director": "",
+    "director": "Jan Koester",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 2,
     "length": 5,
     "category": "5 animation",
     "title": "Trial & Error",
-    "director": "",
+    "director": "Antje Hein",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 7,
     "length": 2,
     "category": "5 animation",
     "title": "selfie automaton",
-    "director": "",
+    "director": "Ana Botezatu",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": "",
     "length": 5,
     "category": "5 animation",
     "title": "Frankfurter Str.99a",
@@ -771,50 +849,55 @@
     "trailer": ""
   },
   {
+    "day": 9,
     "length": 4,
     "category": "5 animation",
     "title": "TRAPPED",
-    "director": "",
+    "director": "Theresa Grysczok and Florian Maubach",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 7,
     "length": 3,
     "category": "5 animation",
-    "title": "Der Flug der Haube",
-    "director": "",
+    "title": "Der Flug der Maube",
+    "director": "Florian Maubach",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 8,
     "length": 3,
     "category": "5 animation",
     "title": "COMA The Sea",
-    "director": "",
+    "director": "Nils Knoblich and Florian Maubach",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 1,
     "length": 2,
     "category": "5 animation",
     "title": "Leftovers",
-    "director": "",
+    "director": "T*razor and Alma W.Bär",
     "director link": "",
     "description": "",
     "movie link": "",
     "trailer": ""
   },
   {
+    "day": 6,
     "length": 1,
     "category": "5 animation",
     "title": "Hypochondria",
-    "director": "",
+    "director": "Alma W.Bär",
     "director link": "",
     "description": "",
     "movie link": "",
