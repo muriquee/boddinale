@@ -24,6 +24,11 @@ exports = module.exports = function(req, res) {
       .find()
       .where({'screenTime.year' : 2017})
       .where({'screenTime.day' : req.params['day']})
+      .sort({
+        'screenTime.year'     : 1,
+        'screenTime.day'      : 1,
+        'screenTime.position' : 1
+      })
       .exec(function(err, docs) {
         locals.data.movies = docs
         console.log('executed query for day ' + req.params.day)
