@@ -141,10 +141,12 @@
   div {
 	display: block;
 	float: left;
+	font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif !important;
   }
   
   .description-text {
-	width: 100%;
+	width: 100% !important;
+	font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif !important;
   }
 
 
@@ -201,21 +203,24 @@
   .card-content {
 	
 	.description-text {
-	  max-height: 5.6em;
+	  max-height: 7.2rem;
 	  overflow: hidden;
 	}
 
 	p, span {
 	  margin-bottom: 1.5rem;
 	  margin-top: .5rem;
+	  letter-spacing: 0.5px !important;
 	  overflow: hidden;
-	  display: -webkit-box;
+	  display: grid;
+	  float: left;
 	  font-size: 1.5rem !important;
 	  -webkit-line-clamp: 3;
+	  width: 100%;
 	  -webkit-box-orient: vertical;
 	  text-align: left !important;
 	  color: #404041 !important;
-	  font-family: 'Open Sans',Arial,sans-serif !important;
+	  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif !important;
 	}
 	
 	p:not(:first-child), #share {
@@ -237,6 +242,7 @@
 
 .large-card {
   
+  
   .card-content {
 	margin: 2rem;
 	padding: 0 !important;
@@ -252,11 +258,26 @@
   
   .description-text {
 	margin-top: 1.5rem;
+	width: 100% !important;
+
+	a {
+	  color: #404041 !important;
+	  text-decoration: underline !important;
+	}
+	
   }
 
   .card-image {
-	margin: 2rem 0 0 2rem;
+	padding: 2rem 2rem 0 2rem;
   }
+  
+  
+  span, p, div, h1, h2, h3, h4, h5 {
+	font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	letter-spacing: 0.5px !important;
+  }
+  
+  
   
   
   .author {
