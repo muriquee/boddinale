@@ -8,15 +8,17 @@ block js
       a : "#{data.query.a}",
       q : "#{data.query.q}",
       y : +"#{data.query.y}",
-      d : +"#{data.query.d}"
+      d : +"#{data.query.d}",
+      c : "#{data.query.c}"
     }
   script.
     function queryString() {
-      let res = []
+      var res = []
       if (query.y &&  query.y != 0) res.push(`y=${query.y}`)
       if (query.d) res.push(`d=${query.d}`)
       if (query.q) res.push(`q=${query.q}`)
       if (query.a) res.push(`a=${query.a}`)
+      if (query.c) res.push(`c=${query.c}`)
       if (query.page) res.push(`page=${query.page}`)
       return res.length == 0 ? '' : '?' + res.join('&')
     }
@@ -26,31 +28,36 @@ block js
     function submitSearch () {
       query.q = $('#search-input').val()
       delete query.page
-      let href = removeQuery(window.location.href)
+      var href = removeQuery(window.location.href)
       window.location.href = href + queryString()
     }
     function selectYear (k) {
       query.y = k.toString()
       delete query.page
-      let href = removeQuery(window.location.href)
+      var href = removeQuery(window.location.href)
       window.location.href = href + queryString()
     }
     function selectAward (a) {
-      let href = removeQuery(window.location.href)
+      var href = removeQuery(window.location.href)
       query.a = a
+      delete query.page
+      window.location.href = href + queryString()
+    }
+    function selectCategory (c) {
+      var href = removeQuery(window.location.href)
+      query.c = c
       delete query.page
       window.location.href = href + queryString()
     }
     $(function() {
       $('#search-submit-button').on('click', submitSearch)
       $('#award-select').val(query.a || '')
+      $('#category-select').val(query.c || '')
     })
     
-    
 block intro
-    .container
+  .container
                 
-
 block content
   .container.archive
     .row.col-sm-5.search-wrapper
@@ -65,6 +72,13 @@ block content
           each award in data.awards
             option= award
           option(value="") Search for awards
+      .col-sm-8.category
+        select#category-select.form-control(
+          onchange="selectCategory($(this).val())"
+          value="#{data.query.c || ''}")
+          each category in data.categories
+            option= category
+          option(value="") Search by category
     .row.col-sm-9.years
       ul(style="list-style:none; padding-left:0;")
       each year, index in data.years

@@ -6,6 +6,8 @@ const awards = ['Community Award', 'Loophole Award', 'Best Documentary',
       'Special Mention of the Jury', 'Special Mention of the Loophole',
       'Independant Life Award']
 
+const categories = ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary']
+
 exports = module.exports = function(req, res) {
   const view = new keystone.View(req, res)
   const locals = res.locals
@@ -16,7 +18,8 @@ exports = module.exports = function(req, res) {
     movies : [],
     query : req.query,
     years : [2013,2014,2015,2016,2017],
-    awards : awards
+    awards : awards,
+    categories : categories
   }
 
   locals.qStrForPage = function(i) {
@@ -25,6 +28,7 @@ exports = module.exports = function(req, res) {
     if (req.query.d) res.push(`d=${req.query.d}`)
     if (req.query.q) res.push(`q=${req.query.q}`)
     if (req.query.a) res.push(`a=${req.query.a}`)
+    if (req.query.c) res.push(`c=${req.query.c}`)
     res.push(`page=${i}`)
     return '?' + res.join('&')
   }
@@ -54,6 +58,9 @@ exports = module.exports = function(req, res) {
     }
     if (req.query.a) {
       query.where({'award' : req.query.a })
+    }
+    if (req.query.c) {
+      query.where({'category' : req.query.c })
     }
 
     query.exec(function(err, docs) {
