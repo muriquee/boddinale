@@ -4,7 +4,7 @@ extends ../layouts/default
 
 mixin faq(faq)
   li
-    p= faq.content
+    p!= faq.content
 
 block intro
   +static-intro("FAQ")
