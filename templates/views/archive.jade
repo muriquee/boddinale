@@ -66,19 +66,20 @@ block intro
                 
 block content
   .container.archive
-    .row.col-sm-5.search-wrapper
-      .col-sm-12
+    .row.col-sm-8.search-wrapper
+      .col-sm-10(style="margin:0 auto;float:none;")
         .input-group
           input#search-input.form-control(type="text", name="search", placeholder="Search.." value=data.query.q)
           span.input-group-addon.btn.btn-default#search-submit-button Search
-      .col-sm-8.category
+    .col-xs-12.col-sm-6(style="margin:0 auto;float:none;")
+      .col-xs-12.col-sm-6.category(style="display:inline-block")
         select#award-select.form-control(
           onchange="selectAward($(this).val())"
           value="#{data.query.a || ''}")
           each award in data.awards
             option= award
           option(value="") Search for awards
-      .col-sm-8.category
+      .col-xs-12.col-sm-6.category(style="float: right; display:inline-block")
         select#category-select.form-control(
           onchange="selectCategory($(this).val())"
           value="#{data.query.c || ''}")

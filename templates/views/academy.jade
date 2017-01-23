@@ -6,9 +6,13 @@ block intro
   .container
     
 block content
-   .container.single-day
+   
+   .container.acadamy-day
       if +data.workshops.length > 0
-        ul.cards
+        h1 1st  Stopmotion Academy
+        h5 workshops start everyday at 10am at Zukunftkino
+        a.director(href="https://www.facebook.com/marcusgrysczok", target="_blank") Directed by Marcus Grysczok
+        ul.cards(style="width:100%;")
           each workshop, index in data.workshops
             li.cards-item
               +workshop(workshop)

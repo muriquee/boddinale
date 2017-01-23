@@ -30,7 +30,10 @@ block intro
     - var days = Array.from(new Array(12), (x,i) => i+8)
     - var weekdays = ["Thursday","Friday","Saturday","Sunday","Monday","Tuesday", "Wednesday"]
      h1 #{weekdays[(data.day-1)%7]} #{days[data.day]}th
-    
+     if data.day < 11
+       h5.h5-days From 18:00 to 23:00 at Loophole and Filmbar
+     if data.day == 11
+       h5.h5-days From 17:00 to 23:00 at Loophole and Filmbar
     
     .row.button-row
       if data.day > 1
@@ -41,7 +44,7 @@ block intro
 block content
   if data.day < 11
     - var beforePause = true
-    .container.single-day
+    .container.single-day                    
       if +data.movies.length > 0
         ul.cards
           each movie, index in data.movies
@@ -53,7 +56,7 @@ block content
                     .card-title Pause
                     .card-text  20:30 to 21:00
             li.cards-item
-              +movie(movie)
+              +movie(movie)                        
   else
     .container: jumbotron
       div!= data.content
