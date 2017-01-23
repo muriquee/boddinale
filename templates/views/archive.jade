@@ -53,6 +53,12 @@ block js
       $('#search-submit-button').on('click', submitSearch)
       $('#award-select').val(query.a || '')
       $('#category-select').val(query.c || '')
+      $('#search-input').on('keydown', function(event) {
+        if (event.which == 13 || event.keyCode == 13) {
+          submitSearch()
+          event.preventDefault()
+        }
+      })
     })
     
 block intro
