@@ -11,9 +11,9 @@ block content
       if +data.workshops.length > 0
         h1 1st  Stopmotion Academy
         h5 workshops start everyday at 10am at Zukunftkino
-        p.director(href="https://www.facebook.com/marcusgrysczok", target="_blank") 
+        p.director 
          span Directed by 
-         <a> Marcus Grysczok
+         a(href="https://www.facebook.com/marcusgrysczok", target="_blank") Marcus Grysczok
         ul.cards(style="width:100%;")
           each workshop, index in data.workshops
             li.cards-item
