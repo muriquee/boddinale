@@ -3,20 +3,20 @@ extends ../layouts/default
 
 mixin jury-item(o)
   span(style="font-size: 16px;"): strong
-    span(style="color: #993300;")= o.name + " - "
+    span(style="color: #993300;")= o.name
   each link, i in o.links
     a(href="#{link.href}" target="_blank")= link.link
     if i < o.links.length - 1
-      span &#47;
+      
   br
 
 block intro
   +static-intro("Jury")
 
 block content
-  .container: .jumbotron
+  .container: .jumbotron.jury
     - var jury = []
-    - jury.push({name : 'Halea Isabelle Kala', links : [{href : 'http://www.timetomuse.com/',           link : 'MUSÉ'}, {href : '"http://kaosberlin.de', link : 'KAOS'}]})
+    - jury.push({name : 'Halea Isabelle Kala', links : [{href : 'http://www.timetomuse.com/',           link : 'MUSÉ'}, {href : '"', link : ''}]})
     - jury.push({name : 'Tom Lass',            links : [{href : 'http://www.lassbros.com',              link : 'Lass Bros'          }]})
     - jury.push({name : 'Michal Lederer',      links : [{href : 'hhttp://michaellederer.com',           link : 'michaellederer.com' }]})
     - jury.push({name : 'Sven Loose',          links : [{href : 'http://zukunft-ostkreuz.de/',          link : 'Kino Zukunft'       }]})

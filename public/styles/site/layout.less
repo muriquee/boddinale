@@ -74,6 +74,35 @@ h5 {
 }
 
 
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  background-color: #eee !important;
+}
+
+.dropdown-menu>.active>a {
+  background-color: #eee !important;
+}
+
+
+.navbar-right {
+  position: absolute;
+  right: 0;
+}
+
+
+.navbar-nav>li>.dropdown-menu {
+  
+  padding: 0;
+}    
+
+.dropdown-menu>li>a {
+  padding: 1rem;
+  border-radius: 0;
+  margin: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+  font-weight: 600;
+}
 
   
   .navbar-default {
@@ -118,6 +147,7 @@ h5 {
   background-color: @gray-bg !important;
   border-bottom: 2px solid #c1c1c1;
 }
+
 
 
 
@@ -180,6 +210,7 @@ h5 {
 
 .days-content {
   font-size: 2rem;
+  line-height: 1.2;
 }
 
 
@@ -235,6 +266,7 @@ select:not([multiple]) {
 	text-align: center;
 	font-size: 2rem;
 	letter-spacing: 1px;
+	font-weight: 600;
   }
   
   .jumbotron {
@@ -249,7 +281,8 @@ select:not([multiple]) {
   
   
   .logo {
-	width: 25%;
+	width: 100%;
+	margin-top: 10px;
 	margin-bottom: 0;
   }
   
@@ -290,11 +323,46 @@ select:not([multiple]) {
 	  display: block;
 	  padding-top: 1.5rem;
 	  text-transform: uppercase;
-	  font-weight: 500;
+	  font-weight: 600;
 	  letter-spacing: 1px;
 	}
 	
   }
+  
+}
+
+.jury {
+  text-align: center;
+  
+  span {
+	font-size: 4rem;
+	display: block;
+	color: #404041 !important;
+  }
+  
+  a {
+	color: #404041;
+	text-decoration: none;
+	font-size: 2rem;
+	/* padding-bottom: 0rem; */
+	text-transform: uppercase;
+	display: block;
+	letter-spacing: 1px;
+
+
+	&:hover {
+	  text-decoration: underline;
+	}
+	
+	&:first-child {
+	  margin-bottom: 0;
+	}
+	
+  }
+  
+  
+  
+  
   
 }
 
@@ -328,21 +396,27 @@ select:not([multiple]) {
   }
 
   .col-md-12 {
+	margin-top: 0.5rem;
   }
 
-  .col-md-4 {
+  .col-md-3, .col-md-4 {
 	height: 50px;
 	display: flex;
-	margin-top: 5rem;
+	margin-top: 3rem;
 	align-items: center;
 	flex-wrap: wrap;
-	padding-bottom: 10rem;
+	padding-bottom: 7rem;
+	
+	a {
+	  width: 100%;
+	}
+  
 	
 	img {
 	  height: auto;
 	  max-width: 100%;
 	  vertical-align: middle;
-	  width: 50%;
+	  width: 40%;
 	  text-align: center;
 	  display: block;
 	  margin: 0 auto;
