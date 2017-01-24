@@ -47,7 +47,7 @@ exports = module.exports = function (app) {
 	app.get('/day/:day', routes.views.day)
 	app.all('/contact', routes.views.contact)
 	app.get('/cookies', routes.views.cookies)
-
+	app.get('/api/movies', routes.api.movies)
 	app.all('/admin/upload', middleware.requireUser, routes.views.admin.upload)
 
 	//admin
