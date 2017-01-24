@@ -53,6 +53,15 @@ Movie.schema.virtual('description.full').get(function() {
   return this.description.extended || this.description.brief
 })
 
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
+
+Movie.schema.methods.format = function () {
+  this.director.name = toTitleCase(this.director.name)
+  this.title = this.title.toUpperCase()
+}
+
 Movie.defaultColumns = 'title, director|20%, screenTime.year|20%, screenTime.day|20%'
 
 Movie.register()
