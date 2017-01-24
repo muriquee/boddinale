@@ -55,7 +55,7 @@ function insertData (year, callback) {
       let mdb = new Movie()
       mdb.set({
         title : movie['title'],
-        length : +movie['length'].replace(/\D/g,''),
+        length : typeof movie.length == 'string' ? movie['length'].replace(/\D/g,'') : movie['length'],
         description : movie['description'],
         director : {
           name : movie['director'],
