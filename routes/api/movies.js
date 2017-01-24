@@ -11,8 +11,13 @@ exports = module.exports = (req, res) => {
     if (err) {
       return res.sendStatus(500)
     }
-    docs.forEach(d => d.format())
-    docs.forEach(d => d.description = d.description.replace(/<\/?[^>]+(>|$)/g, ""))
+    docs.forEach(d => {
+      d.format()
+      d.description = d.description.replace(/<\/?[^>]+(>|$)/g, "")
+      if (d.display.image) {
+        d.display.image.url = d._.display.image.crop(800,450)
+      }
+    })
     return res.status(200).json(docs)
   })
 
