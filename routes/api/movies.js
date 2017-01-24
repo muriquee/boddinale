@@ -12,6 +12,7 @@ exports = module.exports = (req, res) => {
       return res.sendStatus(500)
     }
     docs.forEach(d => d.format())
+    docs.forEach(d => d.description = d.description.replace(/<\/?[^>]+(>|$)/g, ""))
     return res.status(200).json(docs)
   })
 
