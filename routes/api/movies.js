@@ -1,4 +1,5 @@
 const keystone = require('keystone')
+const html2txt = require('html-to-text')
 
 exports = module.exports = (req, res) => {
   let query = keystone.list('Movie').model.find()
@@ -13,7 +14,7 @@ exports = module.exports = (req, res) => {
     }
     docs.forEach(d => {
       d.format()
-      d.description = d.description.replace(/<\/?[^>]+(>|$)/g, "")
+      d.description = html2txt.fromString(d.description, { wordwrap : false })
       if (d.display.image) {
         d.display.image.url = d._.display.image.crop(800,450)
       }
