@@ -31,6 +31,7 @@ exports = module.exports = function(req, res) {
         })
         .exec(function(err, docs) {
           locals.data.movies = docs
+          docs.forEach(d => d.format())
           console.log('executed query for day ' + req.params.day)
           console.log('found ' + docs.length + " documents" )
           next(err)

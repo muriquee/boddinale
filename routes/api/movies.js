@@ -11,6 +11,7 @@ exports = module.exports = (req, res) => {
     if (err) {
       return res.sendStatus(500)
     }
+    docs.forEach(d => d.format())
     return res.status(200).json(docs)
   })
 
