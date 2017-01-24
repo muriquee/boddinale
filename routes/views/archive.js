@@ -64,7 +64,7 @@ exports = module.exports = function(req, res) {
     }
 
     query.exec(function(err, docs) {
-      docs.forEach(d => d.format())
+      docs.results.forEach(d => d.format())
       locals.data.movies = docs
       next(err)
     })

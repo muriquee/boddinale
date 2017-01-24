@@ -58,8 +58,11 @@ function toTitleCase(str) {
 }
 
 Movie.schema.methods.format = function () {
+  
   this.director.name = toTitleCase(this.director.name)
   this.title = this.title.toUpperCase()
+
+  //console.log('formatted', this)
 }
 
 Movie.defaultColumns = 'title, director|20%, screenTime.year|20%, screenTime.day|20%'
