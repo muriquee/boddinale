@@ -68,7 +68,14 @@ function insertData (year, callback) {
         },
         externalLink : isGMailLink(movie['movie link']) ? '' : movie['movie link']
       })
-      let category = (movie['category'].split(' ')[1] || '').toLowerCase().capitalize()
+      let categoryRaw = movie['category']
+      let category = ''
+      if (typeof categoryRaw == 'string' && categoryRaw.indexOf(' ') !== -1) {
+        category = (categoryRaw.split(' ')[1] || '').toLowerCase().capitalize()
+      }
+      else if (typeof categoryRaw == 'string'){
+        category = categoryRaw
+      }
       console.log("category", category)
       if (categories.indexOf(category) !=- 1){
         mdb.set({
