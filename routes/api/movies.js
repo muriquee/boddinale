@@ -4,7 +4,7 @@ exports = module.exports = (req, res) => {
   let query = keystone.list('Movie').model.find()
   
   if (req.query) {
-    quer.where(req.query)
+    query.where(req.query)
   }
 
   query.exec((err, docs) => {
