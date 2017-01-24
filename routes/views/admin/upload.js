@@ -27,11 +27,11 @@ function convertYoutubeToEmbed (id) {
 }
 
 function isYoutube (url) {
-  return url.indexOf('yout') != -1
+  return url ? url.indexOf('yout') != -1 : false
 }
 
 function isVimeo (url) {
-  return url.indexOf('vimeo') != -1
+  return url ? url.indexOf('vimeo') != -1 : false
 }
 
 function convertVimeoToEmbed(input) {
