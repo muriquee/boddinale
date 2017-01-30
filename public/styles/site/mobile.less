@@ -1,3 +1,8 @@
+.mobile-helpers {
+  display: none;
+}
+
+
 @media (min-width: 768px) {
 .navbar-nav>li>a {
   padding-top: 8px;
@@ -7,6 +12,24 @@
 
 
 @media (max-width: 768px) {
+  
+  
+  .mobile-helpers {
+	display: block;
+
+	b, a {
+	  text-transform: uppercase;
+	  letter-spacing: 1px;
+	  font-size: 1.5rem;
+	  font-weight: 600;
+	}
+	
+	
+  }
+  
+  .fixed-helpers {
+	display: none;
+  }
 
   .dropdown-menu>li>a {
 	font-weight: 600;

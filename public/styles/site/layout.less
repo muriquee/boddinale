@@ -349,8 +349,41 @@ select:not([multiple]) {
 
 .jury {
   text-align: center;
+  position: relative;
+
+  .jury-header {
+font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 3rem;
+  }
   
+  .title-top {
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-weight: 600;
+	float: left;
+	font-size: 4rem;
+	mrgin: 0 aut;
+  }
   
+  .fixed-helpers {
+	font-size: 1.5rem;
+	text-align: right;
+	position: absolute;
+	margin-right: 2rem;
+	right: 0;
+	margin-top: 0;
+	
+	
+	b, a {
+	  text-transform: uppercase;
+	  letter-spacing: 1px;
+	  font-size: 1.5rem;
+	  font-weight: 600;
+	}
+	
+  }
   
   span {
 	font-size: 3rem;
@@ -383,6 +416,9 @@ select:not([multiple]) {
   
   
 }
+
+
+
 
 .contact {
   background-color: @gray-bg;
