@@ -70,11 +70,11 @@ function insertData (year, callback) {
       })
       let categoryRaw = movie['category']
       let category = ''
-      if (typeof categoryRaw == 'string' && categoryRaw.indexOf(' ') !== -1) {
-        category = (categoryRaw.split(' ')[1] || '').toLowerCase().capitalize()
-      }
-      else if (typeof categoryRaw == 'string'){
-        category = categoryRaw
+      // if (typeof categoryRaw == 'string' && categoryRaw.indexOf(' ') !== -1) {
+      //   category = (categoryRaw.split(' ')[1] || '').toLowerCase().capitalize()
+      // }
+      if (typeof categoryRaw == 'string'){
+        category = categoryRaw.toLowerCase().capitalize()
       }
       console.log("category", category)
       if (categories.indexOf(category) !=- 1){
