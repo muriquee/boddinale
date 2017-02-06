@@ -29,11 +29,8 @@ block intro
   .container
     - var days = Array.from(new Array(12), (x,i) => i+8)
     - var weekdays = ["Thursday","Friday","Saturday","Sunday","Monday","Tuesday", "Wednesday"]
-     h1 #{weekdays[(data.day-1)%7]} #{days[data.day]}th
-     if data.day < 11
-       h5.h5-days From 18:00 to 23:00 at Loophole and Filmbar
-     if data.day == 11 || data.day == 4
-       h5.h5-days From 17:00 to 23:00 at Loophole and Filmbar
+    h1 #{weekdays[(data.day-1)%7]} #{days[data.day]}th
+    h5.h5-days From #{data.day%7 == 4 ? '17:00' : '18:00'} to 23:00 at Loophole and Filmbar
     
     .row.button-row
       if data.day > 1
