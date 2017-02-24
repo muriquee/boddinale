@@ -1,20 +1,9 @@
 extends ../layouts/default
 
 block intro
-	.container.home
-		h1  February 9th — 19th 2017 <br /> 5th Edition <br />
-		img.logo(src='../images/boddinale_stripe.jpg')
-		h5 	Free Entrance — Loophole and Filmbar — Boddinstraße 60 & 10
-		p(style="text-align: center;"): a(href="http://www.boddinale.com/files/Boddinale_2017_program.pdf") Download Program
-
-		
-		- var days = Array.from(new Array(11), (x,i) => i+1)
-		- var weekdays = ["Thursday","Friday","Saturday","Sunday","Monday","Tuesday", "Wednesday"]
-		ul.row
-			each d, i in days
-				li.col-xs-15.col-lg-15.days: a(href="/day/#{d}").days-content #{weekdays[i%7]}<br />#{8+d}th
-					img(src='../images/day#{d}.jpg')
-
 
 block content
+  .container: jumbotron
+    if data
+      div!= data.content
 
