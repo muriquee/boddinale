@@ -22,7 +22,7 @@ exports = module.exports = function(req, res) {
     if (locals.data.day < 11) {
       keystone.list('Movie').model
         .find()
-        .where({'screenTime.year' : 2017})
+        .where({'screenTime.year' : new Date().getFullYear()})
         .where({'screenTime.day' : req.params['day']})
         .sort({
           'screenTime.year'     : 1,
