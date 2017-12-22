@@ -19,15 +19,15 @@ var _ = require('lodash');
 */
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
-		{ label: 'Jury',     key: 'jury',     href: '/jury'    },
-		{ label: 'Academy',  key: 'academy',  href: '/academy' },
-		{ label: 'Archive',  key: 'archive',  href: '/archive' },
+		{ label: 'Jury', key: 'jury', href: '/jury' },
+		{ label: 'Academy', key: 'academy', href: '/academy' },
+		{ label: 'Archive', key: 'archive', href: '/archive' },
 		// { label: 'Partners', key: 'partners', href: '/partners', inDropdown: true },
-		{ label: 'Press',    key: 'press',    href: '/press' ,   inDropdown: true },
-		{ label: 'Contact',  key: 'contact',  href: '/contact',  inDropdown: true },
-		{ label: 'FAQ',      key: 'faq',      href: '/faq',      inDropdown: true }
-	]
-	res.locals.user = req.user
+		{ label: 'Press', key: 'press', href: '/press', inDropdown: true },
+		{ label: 'Contact', key: 'contact', href: '/contact', inDropdown: true },
+		{ label: 'FAQ', key: 'faq', href: '/faq', inDropdown: true },
+	];
+	res.locals.user = req.user;
 	next();
 };
 
@@ -59,3 +59,9 @@ exports.requireUser = function (req, res, next) {
 	}
 };
 
+exports.cors = function (req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+	res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+	next();
+};
