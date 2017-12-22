@@ -11,8 +11,8 @@ html
 		meta(property='og:url', content='http://www.boddinale.com/')
 		meta(property='og:type', content='article')
 		meta(property='og:title', content='Boddinale')
-		meta(property='og:description', content='February 9th — 19th 2017 5th Edition - FREE ENTRANCE — LOOPHOLE AND FILMBAR — BODDINSTRASSE 60 & 10')
-		meta(property='og:image', content='http://www.muriquee.com/boddinale_front.jpg')
+		meta(property='og:description', content='February 15th — 25th 2018 6th Edition - FREE ENTRANCE — URBAN SPREE — Revalerstrasse 99')
+		meta(property='og:image', content='http://boddinale.com/images/boddinale_front.jpg')
 
 
 		title= title || 'Boddinale'
@@ -86,8 +86,8 @@ html
 										li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 							li.nav-divider
 						ul.nav.navbar-nav.navbar-right
-							li: a(href="http://www.loophole-berlin.com" target="_blank") Loophole
-							li: a(href="http://muriquee.com" target="_blank") Muriquee
+							
+							li: a(href="http://muriquee.com" target="_blank") by Muriquee
 
 							
 
@@ -111,28 +111,29 @@ html
 
 		//- FOOTER
 		.container: #footer
-			p Partners
+			p partners
 				.col-sm-6.col-md-4
-					a(href="https://www.moviemento.de/", target="_blank")
-						img(src='../images/moviemento-logo.png')
-				.col-sm-6.col-md-4
-					a(href="http://zukunft-ostkreuz.de/", target="_blank")
-						img(src='../images/11073809_772454926195890_7190610698609973984_n.png')
+					a(href="http://www.urbanspree.com/", target="_blank")
+						img(src='../images/urban_spree.png')
 				.col-sm-6.col-md-4
 					a(href="http://ilkino.de/", target="_blank")
 						img(src='../images/kino.png')
 				.col-sm-6.col-md-4
+					a(href="https://www.moviemento.de/", target="_blank")
+						img(src='../images/moviemento-logo.png')
+		.container: #footer				
+				.col-sm-6.col-md-4
+					a(href="http://zukunft-ostkreuz.de/", target="_blank")
+						img(src='../images/11073809_772454926195890_7190610698609973984_n.png')
+				.col-sm-6.col-md-4
 					a(href="http://augohr.de/", target="_blank")
 						img(src='../images/aug_logo_1.png')
 				.col-sm-6.col-md-4
-					a(href="https://www.fluxfm.de/", target="_blank")
-						img(src='../images/fluxfm_schwarz_mit_Kasten.png')
-				.col-sm-6.col-md-4
 					a(href="http://alex-berlin.de/", target="_blank")
-						img(src='../images/logo.png')
-			p Sponsors
-				.col-sm-12.col-md-12
-					img(style="width: 85%; margin: 0 auto;display: block;", src='../images/aktionsfonds.jpg')
+						img(src='../images/logo.png')				
+
+
+		
 		.container: #footer
 			p.toogle(data-toggle='collapse', data-target='#demo') Imprint
 				#demo.collapse
