@@ -24,7 +24,7 @@ var importRoutes = keystone.importer(__dirname);
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
-keystone.pre('routes', keystone.middleware.cors);
+// keystone.pre('routes', keystone.middleware.cors);
 
 keystone.pre('render', middleware.flashMessages);
 
@@ -37,6 +37,7 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views
+	app.all('/api*', keystone.middleware.cors);
 	app.get('/', routes.views.index);
 	app.get('/gallery', routes.views.gallery);
 	app.get('/movie/:slug', routes.views.movie);
