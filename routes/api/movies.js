@@ -4,7 +4,7 @@ const html2txt = require('html-to-text');
 exports = module.exports = (req, res) => {
 
   let query = keystone.list('Movie').model.find();
-
+  console.log(req.query)
   if (req.query) {
     query.where(req.query);
   }
