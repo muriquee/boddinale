@@ -3,8 +3,6 @@ const html2txt = require('html-to-text');
 
 exports = module.exports = (req, res) => {
 
-  res.append('Access-Control-Allow-Origin', ['*']);
-
   let query = keystone.list('Movie').model.find();
 
   if (req.query) {
