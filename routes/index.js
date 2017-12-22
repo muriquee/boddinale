@@ -18,38 +18,44 @@
  * http://expressjs.com/api.html#app.VERB
  */
 
-var keystone = require('keystone')
-var middleware = require('./middleware')
-var importRoutes = keystone.importer(__dirname)
+var keystone = require('keystone');
+var middleware = require('./middleware');
+var importRoutes = keystone.importer(__dirname);
 
 // Common Middleware
-keystone.pre('routes', middleware.initLocals)
-keystone.pre('render', middleware.flashMessages)
+keystone.pre('routes', middleware.initLocals);
+keystone.pre('routes', (req, res, next) => {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	next();
+});
+
+keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
 var routes = {
 	views: importRoutes('./views'),
-	api: importRoutes('./api')
-}
+	api: importRoutes('./api'),
+};
 
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views
-	app.get('/', routes.views.index)
-	app.get('/gallery', routes.views.gallery)
-	app.get('/movie/:slug', routes.views.movie)
-	app.get('/archive/', routes.views.archive)
-	app.get('/jury', routes.views.jury)
-	app.get('/partners', routes.views.partners)
-	app.get('/press', routes.views.press)
-	app.get('/faq', routes.views.faq)
-	app.get('/academy', routes.views.academy)
-	app.get('/workshop/:slug', routes.views.workshop)
-	app.get('/day/:day', routes.views.day)
-	app.all('/contact', routes.views.contact)
-	app.get('/cookies', routes.views.cookies)
-	app.get('/api/movies', routes.api.movies)
-	app.all('/admin/upload', middleware.requireUser, routes.views.admin.upload)
+	app.get('/', routes.views.index);
+	app.get('/gallery', routes.views.gallery);
+	app.get('/movie/:slug', routes.views.movie);
+	app.get('/archive/', routes.views.archive);
+	app.get('/jury', routes.views.jury);
+	app.get('/partners', routes.views.partners);
+	app.get('/press', routes.views.press);
+	app.get('/faq', routes.views.faq);
+	app.get('/academy', routes.views.academy);
+	app.get('/workshop/:slug', routes.views.workshop);
+	app.get('/day/:day', routes.views.day);
+	app.all('/contact', routes.views.contact);
+	app.get('/cookies', routes.views.cookies);
+	app.get('/api/movies', routes.api.movies);
+	app.all('/admin/upload', middleware.requireUser, routes.views.admin.upload);
 
 	//admin
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
