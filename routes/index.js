@@ -37,7 +37,7 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views
-	app.all('/api*', keystone.middleware.cors);
+	// app.all('/api*', keystone.middleware.cors);
 	app.get('/', routes.views.index);
 	app.get('/gallery', routes.views.gallery);
 	app.get('/movie/:slug', routes.views.movie);
@@ -51,7 +51,7 @@ exports = module.exports = function (app) {
 	app.get('/day/:day', routes.views.day);
 	app.all('/contact', routes.views.contact);
 	app.get('/cookies', routes.views.cookies);
-	app.get('/api/movies', routes.api.movies);
+	app.get('/api/movies', keystone.middleware.cors, routes.api.movies);
 	app.all('/admin/upload', middleware.requireUser, routes.views.admin.upload);
 
 	//admin
