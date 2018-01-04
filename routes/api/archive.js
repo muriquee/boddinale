@@ -13,7 +13,7 @@ exports = module.exports = function (req, res) {
 	});
 
 	if (req.query.y) {
-		query.where({ 'screenTime.year': +req.query.year });
+		query.where({ 'screenTime.year': +req.query.y });
 	}
 	if (req.query.d) {
 		query.where({ 'screenTime.day': +req.query.d });
