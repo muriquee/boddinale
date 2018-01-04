@@ -1,17 +1,10 @@
 const keystone = require('keystone');
 
-const awards = ['Community Award', 'Loophole Award', 'Best Documentary',
-      'Best Short', 'Best Feature', 'Best Animation', 'Best Music Video',
-      'Special Mention of the Jury', 'Special Mention of the Loophole',
-      'Independant Life Award'];
-
-const categories = ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary'];
-
 exports = module.exports = function (req, res) {
 	const query = keystone.list('Movie').paginate({
 		page: req.query.page || 1,
 		perPage: 12,
-		maxPages: 10,
+		// maxPages: 10,
 	})
 	.sort({
 		'screenTime.year': 1,
