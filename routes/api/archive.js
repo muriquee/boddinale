@@ -30,6 +30,10 @@ exports = module.exports = function (req, res) {
 	}
 
 	query.exec(function (err, docs) {
+		if (err) {
+			console.error(err);
+			res.status(500).json(err);
+		}
 		docs.results.forEach(d => d.format());
 		res.json(docs);
 	});
