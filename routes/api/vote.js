@@ -3,7 +3,7 @@ const Movie = keystone.list('Movie');
 
 exports = module.exports = function (req, res) {
 	Movie.model.findOneAndUpdate({
-		_id: req.body.movieId,
+		_id: req.query.movie,
 	}, {
 		$inc: { votes: 1 },
 	})
