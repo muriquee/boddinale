@@ -4,7 +4,7 @@ const Enquiry = keystone.list('Enquiry');
 exports = module.exports = function (req, res) {
 	console.log('api/contact, req.body = ', req.body);
 	var newEnqury = new Enquiry.model({
-		name: req.body.name,
+		name: { first: req.body.name },
 		email: req.body.email,
 		enquiryType: req.body.enquiryType,
 		message: req.body.message,
