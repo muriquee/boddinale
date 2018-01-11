@@ -9,6 +9,7 @@ exports = module.exports = function (req, res) {
 		enquiryType: req.body.enquiryType,
 		message: req.body.message,
 	});
+	console.log(newEnqury);
 	newEnqury.save(function (err) {
 		if (err) {
 			res.status(500).send(err);
