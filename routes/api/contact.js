@@ -5,6 +5,8 @@ exports = module.exports = function (req, res) {
 	var newEnqury = new Enquiry.model();
 	var updater = newEnqury.getUpdateHandler(req);
 
+	console.log('api/contact, req.body = ', req.body);
+
 	updater.process(req.body, {
 		flashErrors: false,
 		fields: 'name, email, phone, enquiryType, message',
