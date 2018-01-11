@@ -21,7 +21,7 @@
 var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
-var cors = require('cors');
+// var cors = require('cors');
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -37,6 +37,20 @@ var routes = {
 
 // Setup Route Bindings
 exports = module.exports = function (app) {
+
+	app.use((req, res, next) => {
+		console.log('cors middleware fired!');
+		res.header('Access-Control-Allow-Origin', '*');
+		res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+		res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    // intercept OPTIONS method
+		if (req.method === 'OPTIONS') {
+			res.send(200);
+		}
+		else {
+			next();
+		};
+	});
 	// Views
 	// app.all('/api*', keystone.middleware.cors);
 	app.get('/', routes.views.index);
@@ -52,9 +66,9 @@ exports = module.exports = function (app) {
 	app.get('/day/:day', routes.views.day);
 	app.all('/contact', routes.views.contact);
 	app.get('/cookies', routes.views.cookies);
-	app.get('/api/movies', cors({ credentials: true, origin: true }), routes.api.movies);
-	app.get('/api/archive', cors({ credentials: true, origin: true }), routes.api.archive);
-	app.get('/api/vote', cors({ credentials: true, origin: true }), routes.api.vote);
+	app.get('/api/movies'/* , cors({ credentials: true, origin: true })*/, routes.api.movies);
+	app.get('/api/archive'/* , cors({ credentials: true, origin: true })*/, routes.api.archive);
+	app.get('/api/vote'/* , cors({ credentials: true, origin: true })*/, routes.api.vote);
 	app.post('/api/contact', routes.api.contact);
 	app.all('/admin/upload', middleware.requireUser, routes.views.admin.upload);
 
