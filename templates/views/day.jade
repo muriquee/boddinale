@@ -27,10 +27,10 @@ block js
 
 block intro
   .container
-    - var days = Array.from(new Array(12), (x,i) => i+8)
+    - var days = Array.from(new Array(12), (x,i) => i+15)
     - var weekdays = ["Thursday","Friday","Saturday","Sunday","Monday","Tuesday", "Wednesday"]
     h1 #{weekdays[(data.day-1)%7]} #{days[data.day]}th
-    h5.h5-days From #{data.day%7 == 4 ? '17:00' : '18:00'} to 23:00 at Loophole and Filmbar
+    h5.h5-days From #{data.day%7 == 4 ? '17:00' : '18:00'} to 23:00 at Urbanspree
     
     .row.button-row
       if data.day > 1
