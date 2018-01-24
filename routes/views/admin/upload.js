@@ -6,7 +6,7 @@ const dataPath = path.join(__dirname, '/../../../uploads/data.json');
 const Movie = keystone.list('Movie').model;
 
 String.prototype.capitalize = function () {
-	return this.charAt(0).toUpperCase() + this.slice(1);
+	return this.split(' ').map(x => x.charAt(0).toUpperCase() + x.slice(1)).join(' ');
 };
 
 const categories = ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary'];
