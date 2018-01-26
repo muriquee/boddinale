@@ -4,6 +4,7 @@ extends ../layouts/default
 
 block og
   meta(property='og:url', content='http://boddinale.com/movie/#{data.movie.slug}')
+  meta(property='og:title', content='#{data.movie.title}')
   if data.movie.display && data.movie.display.image && data.movie.display.image.secure_url
     meta(property='og:image', content='#{data.movie.display.image.secure_url}')
   if data.movie.display && data.movie.display.youtube
