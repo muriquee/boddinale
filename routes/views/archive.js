@@ -6,7 +6,7 @@ const awards = ['Community Award', 'Loophole Award', 'Best Documentary',
       'Special Mention of the Jury', 'Special Mention of the Loophole',
       'Independant Life Award'];
 
-const categories = ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary'];
+const categories = ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary', 'Porn'];
 
 exports = module.exports = function (req, res) {
 	const view = new keystone.View(req, res);

@@ -36,7 +36,7 @@ Movie.add({
 	},
 	category: {
 		type: Types.Select,
-		options: ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary'],
+		options: ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary', 'Porn'],
 	},
 	award: {
 		type: Types.Select,

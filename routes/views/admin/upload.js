@@ -9,7 +9,7 @@ String.prototype.capitalize = function () {
 	return this.split(' ').map(x => x.charAt(0).toUpperCase() + x.slice(1)).join(' ');
 };
 
-const categories = ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary'];
+const categories = ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary', 'Porn'];
 
 function getIdFromYoutube (url) {
 	var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
