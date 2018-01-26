@@ -6,17 +6,17 @@ block og
   meta(property='og:title', content='#{data.movie.title}')
   //- meta(property='og:description', content='#{data.movie.description}')
   meta(property='og:url', content='http://boddinale.com/movie/#{data.movie.slug}')
+  meta(property='og:type', content='article')
   if data.movie.display && data.movie.display.image && data.movie.display.image.secure_url
     meta(property='og:image', content='#{data.movie.display.image.secure_url}')
-    meta(property='og:type', content='article')
   else
     meta(property='og:image', content='http://boddinale.com/images/boddinale_front.jpg')
   if data.movie.display && data.movie.display.youtube
-    meta(property='og:type', content='movie')
+    //- meta(property='og:type', content='movie')
     meta(property='og:video', content='#{data.movie.display.youtube}')
     meta(property='og:video:secure_url', content='#{data.movie.display.youtube}')
   if data.movie.display && data.movie.display.vimeo
-    meta(property='og:type', content='movie')
+    //- meta(property='og:type', content='movie')
     meta(property='og:video', content='#{data.movie.display.vimeo}')
     meta(property='og:video:secure_url', content='#{data.movie.display.vimeo}')
 
