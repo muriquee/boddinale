@@ -69,6 +69,7 @@ exports = module.exports = function (app) {
 	app.get('/api/movies'/* , cors({ credentials: true, origin: true })*/, routes.api.movies);
 	app.get('/api/archive'/* , cors({ credentials: true, origin: true })*/, routes.api.archive);
 	app.get('/api/vote'/* , cors({ credentials: true, origin: true })*/, routes.api.vote);
+	app.get('/api/lastDay', routes.api.lastDay);
 	app.post('/api/contact', routes.api.contact);
 	app.all('/admin/upload', middleware.requireUser, routes.views.admin.upload);
 
