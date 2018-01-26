@@ -7,8 +7,10 @@ block og
     meta(property='og:image', content='#{data.movie.display.image.secure_url}')
   if data.movie.display && data.movie.display.youtube
     meta(property='og:video', content='#{data.movie.display.youtube}')
+    meta(property='og:video:secure_url', content='#{data.movie.display.youtube}')
   if data.movie.display && data.movie.display.vimeo
     meta(property='og:video', content='#{data.movie.display.vimeo}')
+    meta(property='og:video:secure_url', content='#{data.movie.display.vimeo}')
 
 block content
   .container: row
