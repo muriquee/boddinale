@@ -17,7 +17,7 @@ exports = module.exports = function (req, res) {
 	locals.data = {
 		movies: [],
 		query: req.query,
-		years: [2013, 2014, 2015, 2016, 2017],
+		years: [2013, 2014, 2015, 2016, 2017, 2018],
 		awards: awards,
 		categories: categories,
 	};
