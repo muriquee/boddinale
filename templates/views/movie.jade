@@ -3,7 +3,6 @@ include ../mixins/movie
 extends ../layouts/default
 
 block og
-  meta(property='dflgkjfgdd;lkfgj', content='fd;ggfd; ')
   if data.movie.display && data.movie.display.image
     meta(property='og:image', content='#{data.movie.display.image}')
   if data.movie.display && data.movie.display.youtube
