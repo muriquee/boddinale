@@ -5,6 +5,7 @@ mixin directorName(obj)
 mixin videoEmbed(url)
   .vid-wrapper
     .h-iframe
+      img.card-image(src="")
       iframe(src=url frameborder="0" allowfullscreen)
 
 mixin movie(movie, truncate)
