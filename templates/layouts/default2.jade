@@ -76,7 +76,7 @@ html
             a.navbar-brand(href='/')
               img(src='../images/boddinale_logo.png')
             .logo-text BERLIN COMMUNITY MOVIE FESTIVAL
-          .collapse.navbar-collapse
+          .collapse.navbar-collapse.in
             ul.nav.navbar-nav.navbar-left
               each link in navLinks.filter(l => !l.inDropdown)
                 li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
