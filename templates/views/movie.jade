@@ -27,5 +27,5 @@ block content
     - var day = data.movie.screenTime.day
     if data.movie.screenTime.year == 2018
       h1 
-        a(href="/day/#{day}") #{weekdays[(data.day-1)%7]} Feb  #{days[data.day]}th
+        a(href="/day/#{day}") #{weekdays[(day-1)%7]} Feb  #{days[day]}th
     +movie(data.movie, true)
