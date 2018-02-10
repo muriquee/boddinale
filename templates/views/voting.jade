@@ -13,7 +13,7 @@ block content
           if +movie.votes > 0
             li
               div
-                span= '#' + index + '&nbsp';
+                span= '#' + index + '&nbsp'
                 a(href="/movie/#{movie.slug}" style="cursor:pointer;")
                   .card-title= movie.title
                 span= +movie.votes + (movie.votes == 1 ? 'vote' : 'votes')
