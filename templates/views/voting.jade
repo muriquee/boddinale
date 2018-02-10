@@ -20,13 +20,13 @@ block content
   container.single-day
     br
     if +movies.length > 0
-      ul(style="list-style-type: none;")
+      ul(style="list-style-type: none; padding-left: 2rem;")
         each movie, index in movies
           if +movie.votes > 0
             li
               div.movie-vote(style="display: inline-flex; width: 100%; justify-content: space-between;")
-                .card-title(style="width: 10%;")= '#' + (index+1) + ' '
-                div(style="width: 60%; text-align:left;")
+                .card-title(style="width: 5%;")= '#' + (index+1) + ' '
+                div(style="width: 80%; text-align:left;")
                   a(href="/movie/#{movie.slug}" style="cursor:pointer;")
                     .card-title= movie.title
-                div.vote-n(style="width: 18%; font-size:1.8rem;")= +movie.votes + (movie.votes == 1 ? ' vote' : ' votes')
+                div.vote-n(style="width: 12%; font-size:1.8rem;")= +movie.votes + (movie.votes == 1 ? ' vote' : ' votes')
