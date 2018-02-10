@@ -14,9 +14,11 @@ block intro
 
     p
     | Voting will end on February 25th at 10am, Urban Spree Time.
+    br
 
 block content
   container.single-day
+    br
     if +movies.length > 0
       ul(style="list-style-type: none;")
         each movie, index in movies
@@ -27,4 +29,4 @@ block content
                 div(style="width: 60%; text-align:left;")
                   a(href="/movie/#{movie.slug}" style="cursor:pointer;")
                     .card-title= movie.title
-                div.card-title(style="width: 18%;")= +movie.votes + (movie.votes == 1 ? 'vote' : 'votes')
+                div.vote-n(style="width: 18%;")= +movie.votes + (movie.votes == 1 ? 'vote' : 'votes')
