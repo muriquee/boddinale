@@ -2,8 +2,18 @@ extends ../layouts/default
 
 block js
 
-//- block intro
-//-   .container
+block intro
+  .container
+    p
+    | The Boddinale Community Award this year is decided on the App. 
+
+    p
+    | You have one vote for each day of the Festival and you are kindly invited to share the movies you like and support them. 
+    p
+    | That is why the festival is free.
+
+    p
+    | Voting will end on February 25th at 10am, Urban Spree Time.
 
 block content
   container.single-day
@@ -12,8 +22,8 @@ block content
         each movie, index in movies
           if +movie.votes > 0
             li
-              div
-                span= '#' + index + '&nbsp'
+              div.movie-vote
+                span= '#' + index + ' '
                 a(href="/movie/#{movie.slug}" style="cursor:pointer;")
                   .card-title= movie.title
                 span= +movie.votes + (movie.votes == 1 ? 'vote' : 'votes')
