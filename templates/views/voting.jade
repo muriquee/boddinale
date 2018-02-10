@@ -18,12 +18,12 @@ block intro
 block content
   style.
     movie-vote {
-      display: flex;
+      display: inline-flex;
       width: 100%;
     }
   container.single-day
     if +movies.length > 0
-      ul
+      ul(style="list-style-type: none;")
         each movie, index in movies
           if +movie.votes > 0
             li
