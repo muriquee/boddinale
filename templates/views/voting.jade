@@ -1,0 +1,19 @@
+extends ../layouts/default
+
+block js
+
+//- block intro
+//-   .container
+
+block content
+  container.single-day
+    if +movies.length > 0
+      ul
+        each movie, index in movies
+          if +movie.votes > 0
+            li
+              div
+                span= '#' + index + '&nbsp';
+                a(href="/movie/#{movie.slug}" style="cursor:pointer;")
+                  .card-title= movie.title
+                span= +movie.votes + (movie.votes == 1 ? 'vote' : 'votes')
