@@ -12,11 +12,9 @@ exports = module.exports = (req, res, next) => {
 			.where({ 'screenTime.year': 2018 })
 			.sort({ votes: -1 })
 			.exec((err, docs) => {
-				if (err) {
-					return next(err);
-				}
 				docs.forEach(d => d.format());
 				res.locals.movies = docs;
+				next(err);
 			});
 	});
 
