@@ -5,22 +5,22 @@ block js
 block intro
   .container
     p
-    | The Boddinale Community Award this year is decided on the App. 
+      | The Boddinale Community Award this year is decided on the App. 
 
     p
-    | You have one vote for each day of the Festival and you are kindly invited to share the movies you like and support them. 
+      | You have one vote for each day of the Festival and you are kindly invited to share the movies you like and support them. 
     p
-    | That is why the festival is free.
+      | That is why the festival is free.
 
     p
-    | Voting will end on February 25th at 10am, Urban Spree Time.
+      | Voting will end on February 25th at 10am, Urban Spree Time.
     br
 
 block content
   .container
     br
     if +movies.length > 0
-      ul(style="list-style-type: none; padding-left: 2rem;")
+      ul(style="list-style-type: none;")
         each movie, index in movies
           if +movie.votes > 0
             li
