@@ -29,4 +29,4 @@ block content
                 div(style="width: 60%; text-align:left;")
                   a(href="/movie/#{movie.slug}" style="cursor:pointer;")
                     .card-title= movie.title
-                div.vote-n(style="width: 18%;")= +movie.votes + (movie.votes == 1 ? 'vote' : 'votes')
+                div.vote-n(style="width: 18%;")= +movie.votes + (movie.votes == 1 ? ' vote' : ' votes')
