@@ -35,10 +35,10 @@ block intro
       h5.h5-days Urban Spree, Revalerstrasse 99
       h5.h5-days (english subtitles when needed)
     else
-      h1 Winners of the 2018 awards:
+      h1 2018 Awards
 
     .row.button-row
-      if data.day > 1
+      if data.day > 1 && data.day < 11
         button.btn.btn-default.previous-button   Previous Day
       if data.day < 11
         button.btn.btn-default.next-button       Next Day

@@ -2,6 +2,8 @@ var keystone = require('keystone');
 
 exports = module.exports = function (req, res) {
 
+	return res.redirect('/day/11')
+
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 

@@ -1,6 +1,10 @@
 const keystone = require('keystone');
+awards
+Order = ['feature', 'doc', 'short', 'animation', 'music video', 'community award', 'urban spree award', 'special mention of the jury']
 
-//awardOrder = feature, doc, short, animation, music video, community award, urban spree award, special mention of the jury
+const awards = ['Best Feature', 'Best Documentary', 'Best Short', 'Best Animation', 'Best Music Video',
+	'Community Award', 'Loophole Award', 'Special Mention of the Loophole',
+    'Independant Life Award', 'Urban Spree Award', 'Special Mention of the Jury',];
 
 exports = module.exports = function (req, res) {
 	let view = new keystone.View(req, res);
@@ -33,6 +37,11 @@ exports = module.exports = function (req, res) {
 				.exec(function (err, docs) {
 					locals.data.movies = docs;
 					docs.forEach(d => d.format());
+					docs = docs.sort((a,b) => {
+						let i = awards.indexOf(a.award)
+						let j = awards.indexOf(b.award)
+						return i < j ? -1 : i == j ? 0 : -1
+					})
 					console.log('executed query for day ' + req.params.day);
 					console.log('found ' + docs.length + ' documents');
 					next(err);
