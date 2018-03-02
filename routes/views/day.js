@@ -57,7 +57,7 @@ exports = module.exports = function (req, res) {
 							locals.data.movies = movies.sort((a,b) => {
 								let i = awards.indexOf(a.award)
 								let j = awards.indexOf(b.award)
-								return i < j ? -1 : i == j ? 0 : -1
+								return i < j ? -1 : i == j ? 0 : 1
 							})
 							next(err);
 						})
