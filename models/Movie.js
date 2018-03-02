@@ -43,7 +43,7 @@ Movie.add({
 		options: ['Community Award', 'Loophole Award', 'Best Documentary',
 							'Best Short', 'Best Feature', 'Best Animation', 'Best Music Video',
 							'Special Mention of the Jury', 'Special Mention of the Loophole',
-							'Independant Life Award'],
+							'Independant Life Award', 'Urban Spree Award'],
 	},
 	tstImage: { type: Types.CloudinaryImage },
 	votes: { type: Types.Number, default: 0 },

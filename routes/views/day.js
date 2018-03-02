@@ -1,5 +1,6 @@
 const keystone = require('keystone');
 
+//awardOrder = feature, doc, short, animation, music video, community award, urban spree award, special mention of the jury
 
 exports = module.exports = function (req, res) {
 	let view = new keystone.View(req, res);
@@ -44,7 +45,16 @@ exports = module.exports = function (req, res) {
 				.exec(function (err, doc) {
 					if (doc) locals.data.content = doc.content;
 					else locals.data.content = 'No Content named \'Last Day\' found';
-					next(err);
+					keystone.list('Movie').model.find()
+						.where({
+							'screenTime.year' : 2018,
+							award : { $ne: null },
+						})
+						.exec((err, movies) => {
+							movies.forEach(m => m.format())
+							locals.data.movies = movies
+							next(err);
+						})
 				});
 		}
 	});

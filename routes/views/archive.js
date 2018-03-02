@@ -4,7 +4,7 @@ const keystone = require('keystone');
 const awards = ['Community Award', 'Loophole Award', 'Best Documentary',
       'Best Short', 'Best Feature', 'Best Animation', 'Best Music Video',
       'Special Mention of the Jury', 'Special Mention of the Loophole',
-      'Independant Life Award'];
+      'Independant Life Award', 'Urban Spree Award'];
 
 const categories = ['Short', 'Feature', 'Music Video', 'Animation', 'Documentary', 'Porn', 'Afterparty', 'Lounge', 'Performance'];
 
