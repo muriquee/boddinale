@@ -35,11 +35,6 @@ exports = module.exports = function (req, res) {
 				.exec(function (err, docs) {
 					locals.data.movies = docs;
 					docs.forEach(d => d.format());
-					docs = docs.sort((a,b) => {
-						let i = awards.indexOf(a.award)
-						let j = awards.indexOf(b.award)
-						return i < j ? -1 : i == j ? 0 : -1
-					})
 					console.log('executed query for day ' + req.params.day);
 					console.log('found ' + docs.length + ' documents');
 					next(err);
@@ -59,7 +54,11 @@ exports = module.exports = function (req, res) {
 						})
 						.exec((err, movies) => {
 							movies.forEach(m => m.format())
-							locals.data.movies = movies
+							locals.data.movies = movies.sort((a,b) => {
+								let i = awards.indexOf(a.award)
+								let j = awards.indexOf(b.award)
+								return i < j ? -1 : i == j ? 0 : -1
+							})
 							next(err);
 						})
 				});
