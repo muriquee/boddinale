@@ -1,6 +1,4 @@
 const keystone = require('keystone');
-awards
-Order = ['feature', 'doc', 'short', 'animation', 'music video', 'community award', 'urban spree award', 'special mention of the jury']
 
 const awards = ['Best Feature', 'Best Documentary', 'Best Short', 'Best Animation', 'Best Music Video',
 	'Community Award', 'Loophole Award', 'Special Mention of the Loophole',
